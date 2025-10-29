@@ -1,0 +1,2394 @@
+openapi: 3.0.3
+info:
+  title: PerfAI API (from requests.jsonl)
+  version: 0.1.0-draft
+  description: Generated automatically from requests.jsonl only.
+  x-generated-at: '2025-10-29T04:45:59Z'
+servers:
+  - url: https://api.perfai.ai
+  - url: https://auth.perfai.ai
+  - url: https://cloud.perfai.ai
+paths:
+  /api/v1/ai-agent/home/chat:
+    delete:
+      operationId: delete_api_v1_ai_agent_home_chat
+      summary: DELETE api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  acknowledged:
+                    type: boolean
+                  deletedCount:
+                    type: integer
+              examples:
+                ex1:
+                  value:
+                    acknowledged: true
+                    deletedCount: 11
+                ex2:
+                  value:
+                    acknowledged: true
+                    deletedCount: 11
+    options:
+      operationId: options_api_v1_ai_agent_home_chat
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/ai-agent/home/stream:
+    get:
+      operationId: get_api_v1_ai_agent_home_stream
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/event-stream:
+              schema:
+                type: string
+    options:
+      operationId: options_api_v1_ai_agent_home_stream
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/ai-agent/registration/chat/stream/{hex}:
+    get:
+      operationId: get_api_v1_ai_agent_registration_chat_stream__hex
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/event-stream:
+              schema:
+                type: string
+    options:
+      operationId: options_api_v1_ai_agent_registration_chat_stream__hex
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/ai-agent/registration/chats/{hex}:
+    get:
+      operationId: get_api_v1_ai_agent_registration_chats__hex
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_ai_agent_registration_chats__hex
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/api-catalog/apps/all:
+    get:
+      operationId: get_api_v1_api_catalog_apps_all
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_api_catalog_apps_all
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/api-catalog/apps/catalog_id_name_label:
+    get:
+      operationId: get_api_v1_api_catalog_apps_catalog_id_name_label
+      summary: GET api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_api_catalog_apps_catalog_id_name_label
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/apigateway/get-accounts:
+    get:
+      operationId: get_api_v1_apigateway_get_accounts
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: gateway
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_apigateway_get_accounts
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: gateway
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/database/all/Default:
+    get:
+      operationId: get_api_v1_database_all_Default
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_database_all_Default
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/database/all/Private:
+    get:
+      operationId: get_api_v1_database_all_Private
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: domains
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: standards
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: statuses
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  domains:
+                    type: object
+                  items:
+                    type: array
+                    items:
+                      type: object
+                  total:
+                    type: integer
+              examples:
+                ex1:
+                  value:
+                    total: 0
+                    domains: {}
+                    items: []
+                ex2:
+                  value:
+                    total: 0
+                    domains: {}
+                    items: []
+    options:
+      operationId: options_api_v1_database_all_Private
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: domains
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: standards
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: statuses
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/integration/github:
+    get:
+      operationId: get_api_v1_integration_github
+      summary: GET api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  level:
+                    type: string
+                  name:
+                    type: string
+                  request:
+                    type: object
+                  response:
+                    type: object
+                  status:
+                    type: integer
+              examples:
+                ex1:
+                  value:
+                    name: HttpError
+                    status: 404
+                    response:
+                      url: https://api.github.com/repos/
+                      status: 404
+                      headers:
+                        access-control-allow-origin: '*'
+                        access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, <redacted>, <redacted>, <redacted>, <redacted>, <redacted>, X-OAuth-Scopes, <redacted>, X-Poll-Interval, <redacted>, X-GitHub-SSO, <redacted>, Deprecation, Sunset
+                        content-length: '106'
+                        content-security-policy: default-src 'none'
+                        content-type: <redacted>; charset=utf-8
+                        date: Tue, 28 Oct 2025 14:52:02 GMT
+                        referrer-policy: <redacted>, <redacted>
+                        server: github.com
+                        strict-transport-security: <redacted>; <redacted>; preload
+                        vary: Accept-Encoding, Accept, <redacted>
+                        x-content-type-options: nosniff
+                        x-frame-options: deny
+                        x-github-media-type: github.v3; format=json
+                        x-github-request-id: 0EC0:2E6633:4ADD72D:14201C3B:6900D892
+                        x-ratelimit-limit: '60'
+                        x-ratelimit-remaining: '56'
+                        x-ratelimit-reset: '1761664511'
+                        x-ratelimit-resource: core
+                        x-ratelimit-used: '4'
+                        x-xss-protection: '0'
+                      data:
+                        message: Not Found
+                        documentation_url: https://docs.github.com/rest
+                        status: '404'
+                    request:
+                      method: GET
+                      url: https://api.github.com/repos/
+                      headers:
+                        accept: application/vnd.github.v3+json
+                        user-agent: octokit-core.js/5.2.0 Node.js/22
+                      request: {}
+                    level: info
+                ex2:
+                  value:
+                    name: HttpError
+                    status: 404
+                    response:
+                      url: https://api.github.com/repos/
+                      status: 404
+                      headers:
+                        access-control-allow-origin: '*'
+                        access-control-expose-headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, <redacted>, <redacted>, <redacted>, <redacted>, <redacted>, X-OAuth-Scopes, <redacted>, X-Poll-Interval, <redacted>, X-GitHub-SSO, <redacted>, Deprecation, Sunset
+                        content-length: '106'
+                        content-security-policy: default-src 'none'
+                        content-type: <redacted>; charset=utf-8
+                        date: Tue, 28 Oct 2025 14:52:30 GMT
+                        referrer-policy: <redacted>, <redacted>
+                        server: github.com
+                        strict-transport-security: <redacted>; <redacted>; preload
+                        vary: Accept-Encoding, Accept, <redacted>
+                        x-content-type-options: nosniff
+                        x-frame-options: deny
+                        x-github-media-type: github.v3; format=json
+                        x-github-request-id: 0880:10C639:4D352DC:121C47B6:6900D8AE
+                        x-ratelimit-limit: '60'
+                        x-ratelimit-remaining: '57'
+                        x-ratelimit-reset: '1761664602'
+                        x-ratelimit-resource: core
+                        x-ratelimit-used: '3'
+                        x-xss-protection: '0'
+                      data:
+                        message: Not Found
+                        documentation_url: https://docs.github.com/rest
+                        status: '404'
+                    request:
+                      method: GET
+                      url: https://api.github.com/repos/
+                      headers:
+                        accept: application/vnd.github.v3+json
+                        user-agent: octokit-core.js/5.2.0 Node.js/22
+                      request: {}
+                    level: info
+    options:
+      operationId: options_api_v1_integration_github
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/integration/jira:
+    get:
+      operationId: get_api_v1_integration_jira
+      summary: GET api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_integration_jira
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/org-users/get_users_orgs:
+    get:
+      operationId: get_api_v1_org_users_get_users_orgs
+      summary: GET api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  data:
+                    type: object
+                  success:
+                    type: boolean
+              examples:
+                ex1:
+                  value:
+                    success: true
+                    data:
+                      userOrgs:
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-20T07:43:18.358Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-20T07:43:18.358Z'
+                          created_by_email: abdul-basith@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-20T07:43:18.358Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Abdul Basith
+                            type: Business
+                            created_on: '2025-01-20T05:37:58.764Z'
+                            created_by: <redacted>
+                            created_by_email: yahyashareef@perfai.ai
+                            __v: 0
+                            org_id: <redacted>
+                            worker_id: PERFAI_ENGINE
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-29T10:17:04.835Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-29T10:17:04.835Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-29T10:17:04.835Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Alpide
+                            type: customer
+                            created_on: '2025-07-25T03:18:24.667Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_ENGINE
+                            __v: 0
+                            org_id: <redacted>
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-10-08T12:14:09.304Z'
+                          created_by: <redacted>
+                          invited_on: '2025-10-08T12:14:09.304Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-10-08T12:14:09.304Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: PerfAI Sales
+                            type: Team
+                            created_on: '2024-11-15T19:57:59.193Z'
+                            parent_org_id: <redacted>
+                            created_by: <redacted>
+                            created_by_email: intesar@perfai.ai
+                            website: https://PerfAI.ai
+                            contact_info: intesar@perfai.ai
+                            description: Demo tenant
+                            __v: 0
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-07-23T06:29:58.526Z'
+                          created_by: <redacted>
+                          invited_on: '2025-07-23T06:29:58.526Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-07-23T06:29:58.526Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Public APIs Security Run
+                            type: business
+                            created_on: '2025-06-02T06:31:24.864Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_ENGINE
+                            __v: 0
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-27T04:11:41.179Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-27T04:11:41.179Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-27T04:11:41.179Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: veeone
+                            type: customer
+                            created_on: '2025-08-16T03:45:27.952Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_AGENT_CS
+                            __v: 0
+                            org_id: <redacted>
+                      currentOrg: <redacted>
+                ex2:
+                  value:
+                    success: true
+                    data:
+                      userOrgs:
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-20T07:43:18.358Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-20T07:43:18.358Z'
+                          created_by_email: abdul-basith@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-20T07:43:18.358Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Abdul Basith
+                            type: Business
+                            created_on: '2025-01-20T05:37:58.764Z'
+                            created_by: <redacted>
+                            created_by_email: yahyashareef@perfai.ai
+                            __v: 0
+                            org_id: <redacted>
+                            worker_id: PERFAI_ENGINE
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-29T10:17:04.835Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-29T10:17:04.835Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-29T10:17:04.835Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Alpide
+                            type: customer
+                            created_on: '2025-07-25T03:18:24.667Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_ENGINE
+                            __v: 0
+                            org_id: <redacted>
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-10-08T12:14:09.304Z'
+                          created_by: <redacted>
+                          invited_on: '2025-10-08T12:14:09.304Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-10-08T12:14:09.304Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: PerfAI Sales
+                            type: Team
+                            created_on: '2024-11-15T19:57:59.193Z'
+                            parent_org_id: <redacted>
+                            created_by: <redacted>
+                            created_by_email: intesar@perfai.ai
+                            website: https://PerfAI.ai
+                            contact_info: intesar@perfai.ai
+                            description: Demo tenant
+                            __v: 0
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-07-23T06:29:58.526Z'
+                          created_by: <redacted>
+                          invited_on: '2025-07-23T06:29:58.526Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-07-23T06:29:58.526Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: Public APIs Security Run
+                            type: business
+                            created_on: '2025-06-02T06:31:24.864Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_ENGINE
+                            __v: 0
+                        - _id: <redacted>
+                          org_id: <redacted>
+                          user_id: <redacted>
+                          user_email: abdul-rahman@perfai.ai
+                          role: <redacted>
+                          status: Active
+                          created_on: '2025-08-27T04:11:41.179Z'
+                          created_by: <redacted>
+                          invited_on: '2025-08-27T04:11:41.179Z'
+                          created_by_email: ghouse@perfai.ai
+                          modified_by: <redacted>
+                          modified_on: '2025-08-27T04:11:41.179Z'
+                          __v: 0
+                          orgDetails:
+                            _id: <redacted>
+                            name: veeone
+                            type: customer
+                            created_on: '2025-08-16T03:45:27.952Z'
+                            created_by: <redacted>
+                            created_by_email: ghouse@perfai.ai
+                            worker_id: PERFAI_AGENT_CS
+                            __v: 0
+                            org_id: <redacted>
+                      currentOrg: <redacted>
+    options:
+      operationId: options_api_v1_org_users_get_users_orgs
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/orgs/my:
+    get:
+      operationId: get_api_v1_orgs_my
+      summary: GET api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  org:
+                    type: object
+                  ou:
+                    type: object
+              examples:
+                ex1:
+                  value:
+                    org:
+                      _id: <redacted>
+                      name: Public APIs Security Run
+                      type: business
+                      created_on: '2025-06-02T06:31:24.864Z'
+                      created_by: <redacted>
+                      created_by_email: ghouse@perfai.ai
+                      worker_id: PERFAI_ENGINE
+                      __v: 0
+                    ou:
+                      role: <redacted>
+                ex2:
+                  value:
+                    org:
+                      _id: <redacted>
+                      name: Abdul Basith
+                      type: Business
+                      created_on: '2025-01-20T05:37:58.764Z'
+                      created_by: <redacted>
+                      created_by_email: yahyashareef@perfai.ai
+                      __v: 0
+                      org_id: <redacted>
+                      worker_id: PERFAI_ENGINE
+                    ou:
+                      role: <redacted>
+    options:
+      operationId: options_api_v1_orgs_my
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/sensitive-data-service/apps/org_issues_security:
+    get:
+      operationId: get_api_v1_sensitive_data_service_apps_org_issues_security
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: owaspTypes
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_sensitive_data_service_apps_org_issues_security
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: owaspTypes
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/spec-validation/apps:
+    get:
+      operationId: get_api_v1_spec_validation_apps
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_spec_validation_apps
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/v1/spec-validation/dashboard/graphs/issues-by-type:
+    get:
+      operationId: get_api_v1_spec_validation_dashboard_graphs_issues_by_type
+      summary: GET api v1
+      tags:
+        - api
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_api_v1_spec_validation_dashboard_graphs_issues_by_type
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/active_issues_by_severity:
+    get:
+      operationId: get_dashboard_active_issues_by_severity
+      summary: GET dashboard active_issues_by_severity
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_active_issues_by_severity
+      summary: OPTIONS dashboard active_issues_by_severity
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/all_savings:
+    get:
+      operationId: get_dashboard_all_savings
+      summary: GET dashboard all_savings
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  savingsBySeverity:
+                    type: object
+                  totalSavings:
+                    type: integer
+              examples:
+                ex1:
+                  value:
+                    savingsBySeverity:
+                      Critical: 8117000
+                      High: 3808250
+                      Medium: 2399400
+                    totalSavings: 14324650
+                ex2:
+                  value:
+                    savingsBySeverity:
+                      Critical: 1394000
+                      High: 712400
+                      Medium: 483500
+                    totalSavings: 2589900
+    options:
+      operationId: options_dashboard_all_savings
+      summary: OPTIONS dashboard all_savings
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_design_issues_per_week:
+    get:
+      operationId: get_dashboard_get_design_issues_per_week
+      summary: GET dashboard get_design_issues_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_get_design_issues_per_week
+      summary: OPTIONS dashboard get_design_issues_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_dismissed_issues_by_severity:
+    get:
+      operationId: get_dashboard_get_dismissed_issues_by_severity
+      summary: GET dashboard get_dismissed_issues_by_severity
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  blocked_issues_count:
+                    type: integer
+                  closed_issues:
+                    type: array
+                    items:
+                      type: object
+              examples:
+                ex1:
+                  value:
+                    closed_issues:
+                      - _id:
+                          severity: High
+                        count: 2
+                      - _id:
+                          severity: Critical
+                        count: 32
+                      - _id:
+                          severity: Medium
+                        count: 3
+                    blocked_issues_count: 0
+                ex2:
+                  value:
+                    closed_issues:
+                      - _id:
+                          severity: Critical
+                        count: 8
+                      - _id:
+                          severity: Medium
+                        count: 1
+                      - _id:
+                          severity: High
+                        count: 1
+                    blocked_issues_count: 0
+    options:
+      operationId: options_dashboard_get_dismissed_issues_by_severity
+      summary: OPTIONS dashboard get_dismissed_issues_by_severity
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_endpoints_per_week:
+    get:
+      operationId: get_dashboard_get_endpoints_per_week
+      summary: GET dashboard get_endpoints_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_get_endpoints_per_week
+      summary: OPTIONS dashboard get_endpoints_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_marketplace_models_per_week:
+    get:
+      operationId: get_dashboard_get_marketplace_models_per_week
+      summary: GET dashboard get_marketplace_models_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_get_marketplace_models_per_week
+      summary: OPTIONS dashboard get_marketplace_models_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_registered_apis_per_week:
+    get:
+      operationId: get_dashboard_get_registered_apis_per_week
+      summary: GET dashboard get_registered_apis_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_get_registered_apis_per_week
+      summary: OPTIONS dashboard get_registered_apis_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/get_vms_per_week:
+    get:
+      operationId: get_dashboard_get_vms_per_week
+      summary: GET dashboard get_vms_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_get_vms_per_week
+      summary: OPTIONS dashboard get_vms_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/sensitive_data_per_week:
+    get:
+      operationId: get_dashboard_sensitive_data_per_week
+      summary: GET dashboard sensitive_data_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_sensitive_data_per_week
+      summary: OPTIONS dashboard sensitive_data_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/tests-summary:
+    get:
+      operationId: get_dashboard_tests_summary
+      summary: GET dashboard tests-summary
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_tests_summary
+      summary: OPTIONS dashboard tests-summary
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /dashboard/total_runs_per_week:
+    get:
+      operationId: get_dashboard_total_runs_per_week
+      summary: GET dashboard total_runs_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    options:
+      operationId: options_dashboard_total_runs_per_week
+      summary: OPTIONS dashboard total_runs_per_week
+      tags:
+        - dashboard
+      parameters:
+        - name: environment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /storage/get_dropbox_user:
+    get:
+      operationId: get_storage_get_dropbox_user
+      summary: GET storage get_dropbox_user
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  connection:
+                    type: 'integer'
+                  message:
+                    type: string
+                  success:
+                    type: boolean
+              examples:
+                ex1:
+                  value:
+                    success: false
+                    message: No Dropbox connection found.
+                    connection: null
+                ex2:
+                  value:
+                    success: false
+                    message: No Dropbox connection found.
+                    connection: null
+    options:
+      operationId: options_storage_get_dropbox_user
+      summary: OPTIONS storage get_dropbox_user
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /storage/get_google_drive:
+    get:
+      operationId: get_storage_get_google_drive
+      summary: GET storage get_google_drive
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  message:
+                    type: string
+              examples:
+                ex1:
+                  value:
+                    message: Google Drive storage does not exist for this user.
+                ex2:
+                  value:
+                    message: Google Drive storage does not exist for this user.
+    options:
+      operationId: options_storage_get_google_drive
+      summary: OPTIONS storage get_google_drive
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /storage/get_one_drive:
+    get:
+      operationId: get_storage_get_one_drive
+      summary: GET storage get_one_drive
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  message:
+                    type: string
+              examples:
+                ex1:
+                  value:
+                    message: OneDrive storage does not exist for this user.
+                ex2:
+                  value:
+                    message: OneDrive storage does not exist for this user.
+    options:
+      operationId: options_storage_get_one_drive
+      summary: OPTIONS storage get_one_drive
+      tags:
+        - storage
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /authorize:
+    get:
+      operationId: get_authorize
+      summary: GET authorize
+      tags:
+        - authorize
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client_id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: prompt
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+  /favicon.ico:
+    get:
+      operationId: get_favicon_ico
+      summary: GET favicon.ico
+      tags:
+        - favicon.ico
+      parameters: []
+      responses:
+        '404':
+          description: HTTP 404
+          content:
+            text/plain:
+              schema:
+                type: string
+  /login:
+    get:
+      operationId: get_login
+      summary: GET login
+      tags:
+        - login
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: protocol
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+  /:
+    get:
+      operationId: get
+      summary: GET /
+      tags: []
+      parameters:
+        - name: code
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+  /assets/{slug}:
+    get:
+      operationId: get_assets__slug
+      summary: GET assets
+      tags:
+        - assets
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/javascript:
+              schema:
+                type: string
+            text/css:
+              schema:
+                type: string
+  /home:
+    get:
+      operationId: get_home
+      summary: GET home
+      tags:
+        - home
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+  /api/v1/apigateway/create-account:
+    options:
+      operationId: options_api_v1_apigateway_create_account
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      operationId: post_api_v1_apigateway_create_account
+      summary: POST api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  __v:
+                    type: integer
+                  _id:
+                    type: string
+                  auto_register:
+                    type: boolean
+                  aws:
+                    type: object
+                  connection_status:
+                    type: string
+                  created_by:
+                    type: string
+                  created_by_email:
+                    type: string
+                  created_on:
+                    type: string
+                  gateway:
+                    type: string
+                  name:
+                    type: string
+                  org_id:
+                    type: string
+              examples:
+                ex1:
+                  value:
+                    org_id: <redacted>
+                    gateway: AWS
+                    name: AWS Gateway Name
+                    connection_status: connected
+                    auto_register: true
+                    aws:
+                      accessKeyId: <redacted>
+                      secretAccessKey: <redacted>
+                      region: us-east-1
+                      isConnected: false
+                      _id: <redacted>
+                    created_on: '2025-10-28T14:52:52.765Z'
+                    created_by: <redacted>
+                    created_by_email: abdul-rahman@perfai.ai
+                    _id: <redacted>
+                    __v: 0
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+              properties:
+                auto_register:
+                  type: boolean
+                aws:
+                  type: object
+                connection_status:
+                  type: string
+                gateway:
+                  type: string
+                name:
+                  type: string
+            examples:
+              ex1:
+                value:
+                  gateway: AWS
+                  name: AWS Gateway Name
+                  connection_status: connected
+                  aws:
+                    accessKeyId: <redacted>
+                    secretAccessKey: <redacted>
+                    region: us-east-1
+                  auto_register: true
+  /api/v1/users/post-login:
+    options:
+      operationId: options_api_v1_users_post_login
+      summary: OPTIONS api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      operationId: post_api_v1_users_post_login
+      summary: POST api v1
+      tags:
+        - api
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+            examples:
+              ex1:
+                value: {}
+  /oauth/token:
+    options:
+      operationId: options_oauth_token
+      summary: OPTIONS oauth token
+      tags:
+        - oauth
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    post:
+      operationId: post_oauth_token
+      summary: POST oauth token
+      tags:
+        - oauth
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties: true
+                properties:
+                  access_token:
+                    type: string
+                  expires_in:
+                    type: integer
+                  id_token:
+                    type: string
+                  scope:
+                    type: string
+                  token_type:
+                    type: string
+              examples:
+                ex1:
+                  value:
+                    access_token: <redacted>
+                    id_token: <redacted>
+                    scope: openid profile email
+                    expires_in: 86400
+                    token_type: <redacted>
+                ex2:
+                  value:
+                    access_token: <redacted>
+                    id_token: <redacted>
+                    scope: openid profile email
+                    expires_in: 86400
+                    token_type: <redacted>
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+  /usernamepassword/login:
+    post:
+      operationId: post_usernamepassword_login
+      summary: POST usernamepassword login
+      tags:
+        - usernamepassword
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+              properties:
+                _csrf:
+                  type: string
+                _intstate:
+                  type: string
+                captcha:
+                  type: string
+                client_id:
+                  type: string
+                connection:
+                  type: string
+                password:
+                  type: string
+                redirect_uri:
+                  type: string
+                response_type:
+                  type: string
+                scope:
+                  type: string
+                state:
+                  type: string
+                tenant:
+                  type: string
+                username:
+                  type: string
+            examples:
+              ex1:
+                value:
+                  client_id: <redacted>
+                  redirect_uri: https://cloud.perfai.ai/
+                  tenant: <redacted>
+                  response_type: code
+                  scope: openid profile email
+                  _csrf: <redacted>
+                  state: <redacted>
+                  _intstate: deprecated
+                  username: abdul-rahman@perfai.ai
+                  password: <redacted>
+                  captcha: ''
+                  connection: Username-<redacted>
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
