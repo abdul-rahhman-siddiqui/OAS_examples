@@ -6,17 +6,10 @@
     "description": "Auto-generated from requests.jsonl",
     "x-generated-at": "2025-10-29T08:28:52Z"
   },
-  "servers": [
-    {
-      "url": "https://api.perfai.ai"
-    },
-    {
-      "url": "https://auth.perfai.ai"
-    },
-    {
-      "url": "https://cloud.perfai.ai"
-    }
+   "servers": [
+    { "url": "https://cloud.perfai.ai" }
   ],
+  
   "paths": {
     "/": {
       "get": {
@@ -2762,4 +2755,5 @@
       "bearerAuth": []
     }
   ]
+
 }
