@@ -1,0 +1,3856 @@
+openapi: 3.0.3
+info:
+  title: PerfAI API
+  version: 1.0.0
+  description: Auto-generated from requests.jsonl
+  x-generated-at: '2025-10-30T11:48:57Z'
+servers:
+  - url: https://api.perfai.ai
+  - url: https://auth.perfai.ai
+  - url: https://cloud.perfai.ai
+paths:
+  /:
+    get:
+      operationId: get_
+      parameters:
+        - name: code
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /api/v1/agents:
+    get:
+      operationId: get_api_v1_agents
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: )=>{const <redacted>;_0x26f973[_0x5bd9dd(0x2307)]=!0x0;const _0x306bfa='https://api.perfai.<redacted>';try{const _0x496cfb=await _0x5a861a['get']...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/agents
+  /api/v1/ai-agent/app/stream:
+    put:
+      operationId: put_api_v1_ai-agent_app_stream
+      parameters:
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  input: ''
+              ex2:
+                value:
+                  input: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0\x20leading-snug\x20mb-3','gpuAcceleration','<redacted>','setSelection','https://api.perfai.<redacted>?input=','NOSQLInjection','icon...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/ai-agent/app/stream?input= {"input": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/ai-agent/home/chats:
+    get:
+      operationId: get_api_v1_ai-agent_home_chats
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_chats
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_api_v1_ai-agent_home_chats
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_id:
+                    type: string
+                  org_id:
+                    type: string
+                  chat_type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: string
+                  execution_state:
+                    type: string
+                  _id:
+                    type: string
+                  created_on:
+                    type: string
+                  updated_on:
+                    type: string
+                  createdAt:
+                    type: string
+                  updatedAt:
+                    type: string
+                  __v:
+                    type: integer
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  title: https://petstore.swagger.io/v2/swagger.json
+      summary: Observed endpoint
+  /api/v1/ai-agent/home/chats/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_home_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  statusCode:
+                    type: integer
+                  message:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/ai-agent/home/stream/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_home_stream_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/event-stream:
+              schema:
+                type: string
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_stream_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/ai-agent/registration/chats/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_registration_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_registration_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/ai-usage:
+    delete:
+      operationId: delete_api_v1_ai-usage
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: nclude\x20an\x20Expected\x20Attribute\x20in\x20API\x20Response\x20Objects:\x20','https://api.perfai.<redacted>','clearTimeout','Weird\x20empty\x20close\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/ai-usage
+  /api/v1/api-catalog/apps:
+    post:
+      operationId: post_api_v1_api-catalog_apps
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  id: ''
+              ex2:
+                value:
+                  id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 5 time(s).
+
+        Discovery snippets: st <redacted>['params']['catalog_id'];if(_0x1caf9a)try{const _0x1b7617='https://api.perfai.<redacted>?id='+_0x1caf9a,_0x51e577=await _0... | 0flex\<redacted>\x20items-center\<redacted>\x20mb-2','popperNode','https://api.perfai.<redacted>?id=','SSL\x20Certificate\x20Expir... | :block\x20ml-2\x22>Download</span>','monthsParse','\<redacted>','https://api.perfai.<redacted>','modulepreload','posAtStart','co...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/api-catalog/apps?id= {"id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/api-catalog/apps/all:
+    get:
+      operationId: get_api_v1_api-catalog_apps_all
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_api-catalog_apps_all
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/api-catalog/apps/all-service-data:
+    get:
+      operationId: get_api_v1_api-catalog_apps_all-service-data
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: _0x2e6dbf[_0x113022(0x2307)],'pageSize':_0x2c5e8e[_0x113022(0x2307)]},_0x4758e6='https://api.perfai.<redacted>?'+new URLSearchP...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/api-catalog/apps/all-service-data?
+  /api/v1/api-catalog/apps/create-run:
+    post:
+      operationId: post_api_v1_api-catalog_apps_create-run
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: full\x20text-left\x20px-2.5\x20py-0.5','data-v-f2e02cf2','UTC','shepherd-arrow','https://api.perfai.<redacted>','scrollToMatch','utf-...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/api-catalog/apps/create-run
+  /api/v1/api-catalog/apps/create-run-multiple:
+    post:
+      operationId: post_api_v1_api-catalog_apps_create-run-multiple
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ose-100\x20dark:bg-rose-500/30','flex\x20items-center\<redacted>\x20p-1','https://api.perfai.<redacted>','Cross-User\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/api-catalog/apps/create-run-multiple
+  /api/v1/apigateway/create-account:
+    post:
+      operationId: post_api_v1_apigateway_create-account
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,'auto_register':!0x0}),_0x54047b=async()=>{const <redacted>,_0x1d3be6='https://api.perfai.<redacted>';if(_0xcf27a9[_0x3b5631(...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/create-account
+  /api/v1/apigateway/delete-account:
+    delete:
+      operationId: delete_api_v1_apigateway_delete-account
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: -green-700','grid\x20grid-cols-3\x20items-start\x20py-1\x20gap-x-2','offsetTop','https://api.perfai.<redacted>','etag','[WebSocket]\x20...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/delete-account
+  /api/v1/apigateway/get-account:
+    get:
+      operationId: get_api_v1_apigateway_get-account
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: f6(0x22a4)]);}},_0x12bd7d=async _0x50d486=>{const <redacted>,_0x38dd4a='https://api.perfai.<redacted>',_0x21ecdf=await _0x5a861a[...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/get-account
+  /api/v1/apigateway/get-accounts:
+    get:
+      operationId: get_api_v1_apigateway_get-accounts
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: :text-slate-400\x20mt-0.5\x20truncate','selected\x20option\x20==>','secondTour','https://api.perfai.<redacted>','p-2\x20flex\x20whitespac...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/get-accounts
+  /api/v1/apigateway/get-apis:
+    get:
+      operationId: get_api_v1_apigateway_get-apis
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: <redacted>;_0x48c78b[_0x1f7846(0x2307)]=_0x1f7846(0x3944);const _0x55baf5='https://api.perfai.<redacted>';_0x5a861a[_0x1f7846(0x42fc)](...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/get-apis
+  /api/v1/apigateway/update-account:
+    put:
+      operationId: put_api_v1_apigateway_update-account
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: });},_0x18e612=async(_0x430531,_0x487135)=>{const <redacted>,_0x3c5ad2='https://api.perfai.<redacted>',_0x3e1cf8={'account_id'... | or-pointer','Check\x20AI\x20logs\x20for\x20more\x20details.','space-x-1','bbbb','https://api.perfai.<redacted>?id=','facet','Evaluates\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigateway/update-account
+
+        Static discovery inferred request body structure.
+  /api/v1/apigee-auth-service/apps/{slug}:
+    get:
+      operationId: get_api_v1_apigee-auth-service_apps_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 4 time(s).
+
+        Discovery snippets: atus':_0x25eb18(0x1d16),'apigee':{'clientId':'','client<redacted>s://api.perfai.<redacted>','api<redacted> | formation.\x20'+error);}}}}},_0x22ce20=()=>{const <redacted>,_0x5d4b5b='https://api.perfai.<redacted>';navigator...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/apigee-auth-service/apps/oauth2callback
+  /api/v1/auths:
+    get:
+      operationId: get_api_v1_auths
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 10 time(s).
+
+        Discovery snippets: 416=async()=>{const <redacted>;try{(await _0x5a861a[_0x2c8ff5(0x35f7)]('https://api.perfai.ai/api/v1/auths',_0x279518[_0x2c8ff5(0x2286)],{'headers':_0x... | onst <redacted>;try{const _0x540322=await _0x5a861a[_0x546b17(0x42fc)]('https://api.perfai.ai/api/v1/auths',{'headers':_0x548e86[_0x546b17(0x2307)]});_... | =async()=>{const <redacted>;try{const _0x2f37ed=await _0x5a861a['get']('https://api.perfai.ai/api/v1/auths',{'headers':_0x10f50d[_0x181327(0x2307)]});c...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/auths
+
+        Static discovery inferred request body structure.
+    put:
+      operationId: put_api_v1_auths
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  id: ''
+              ex2:
+                value:
+                  id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 8 time(s).
+
+        Discovery snippets: 2cbad[_0x517403(0x2307)][_0x517403(0x3518)];(await _0x5a861a[_0x517403(0x2456)]('https://api.perfai.ai/api/v1/auths?id='+_0x1a9db3,JSON[_0x517403(0xc8f)](_0x437 | ms']['id']=_0x4e5821[_0x6b266a(0x3518)];try{(await _0x5a861a[_0x6b266a(0x23ba)]('https://api.perfai.ai/api/v1/auths',{'headers':_0x5050bc[_0x6b266a(0x2307)],'da | onst <redacted>;try{const _0x214781=await _0x5a861a[_0x382e09(0x35f7)]('https://api.perfai.ai/api/v1/auths',_0x233962,{'headers':_0x37ed1a[_0x382e09(0x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/auths?id= {"id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/aws-auth-service/apps/test-connection:
+    get:
+      operationId: get_api_v1_aws-auth-service_apps_test-connection
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ark:bg-red-800/20\x20dark:text-red-400\x20dark:ring-red-600/30','weekdaysShort','https://api.perfai.<redacted>','inView','i...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/aws-auth-service/apps/test-connection
+  /api/v1/category/ai-agent:
+    post:
+      operationId: post_api_v1_category_ai-agent
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 7 time(s).
+
+        Discovery snippets: 0308d=_0xd6553e[_0x3dbc46(0x1728)][_0x3dbc46(0x2642)],_0x154646=await _0x24d255('https://api.perfai.<redacted>'+_0x40308d,_0x3f5256['value']);... | )}),_0x1faed5[_0x3f122b(0x2307)]=!0x0;try{const _0x16664f=await sendChatMessage('https://api.perfai.<redacted>',_0xa1d4df,_0x3f5256[_0x3f122b(0... | ray-800\x20border-t\<redacted>\x20dark:border-gray-700\x20px-5\x20py-4','https://api.perfai.<redacted>','<![CDATA[','buildMarkers','\x5...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/category/ai-agent/
+  /api/v1/category/spec_validation_profile_map:
+    get:
+      operationId: get_api_v1_category_spec_validation_profile_map
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 4 time(s).
+
+        Discovery snippets: x420dd4(0xe62)][_0x420dd4(0x2ce9)],_0x140b2f=await _0x5a861a[_0x420dd4(0x42fc)]('https://api.perfai.<redacted>',{'headers':{... | eld\x27s\x20Required\x20Status:\x20','cx8','OOOO','categoryName','856880eiWNwX','https://api.perfai.<redacted>','in\x20the\x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/category/spec_validation_profile_map
+  /api/v1/default-reports:
+    get:
+      operationId: get_api_v1_default-reports
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,_0x5b8ce8,_0x55f40f,_0x579ee5,_0x518270)=>{const <redacted>,_0x4152dd='https://api.perfai.<redacted>?app_id='<redacted>(0x1d9...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/default-reports?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/default-reports/next:
+    get:
+      operationId: get_api_v1_default-reports_next
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: &&(_0x30c52e['value']=++_0x125b25),_0x32bc97['value']=_0x125b25;const _0x15bc77='https://api.perfai.<redacted>?app_id='<redacted>(...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/default-reports/next?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/design-analysis-service/apps/all:
+    get:
+      operationId: get_api_v1_design-analysis-service_apps_all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: a={'page':_0x1486e5[_0x55886f(0x2307)],'pageSize':_0x928c86['value']},_0x29bdc0='https://api.perfai.<redacted>?'+new URLSearchPa...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/all?
+    post:
+      operationId: post_api_v1_design-analysis-service_apps_all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ansition-colors','_stop','FORMAT-007.3:2024','addMapping','reviver','ArrowLeft','https://api.perfai.<redacted>?','mx-1','termina...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/all?
+  /api/v1/design-analysis-service/apps/das-item:
+    get:
+      operationId: get_api_v1_design-analysis-service_apps_das-item
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: x20-1\x201h-4a1\x201\x200\x200\x201\x20-1\x20-1z','_getRingWeight','data-range','https://api.perfai.<redacted>','(?:^|;\x5...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/das-item/
+  /api/v1/design-analysis-service/apps/getIssues:
+    get:
+      operationId: get_api_v1_design-analysis-service_apps_getIssues
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: late-900\x20dark:text-white','cqmax','map<redacted>Str','Open\x20Release','https://api.perfai.<redacted>?id=','https...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/getIssues?id= {"id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/design-analysis-service/apps/runhistory:
+    get:
+      operationId: get_api_v1_design-analysis-service_apps_runhistory
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: d\x20grid-cols-1\x20gap-6','authBody','Search\x20&\x20Filters','BaseTransition','https://api.perfai.<redacted>?app_id=','...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/runhistory?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/design-analysis-service/apps/schedule-run:
+    post:
+      operationId: post_api_v1_design-analysis-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: edium':'Low';}),_0xe2ec28=async _0x15186a=>{const <redacted>,_0x24bfd4='https://api.perfai.<redacted>?app_id='... | text-white\x20p-2.5\x20rounded-lg\x20font-mono\x20text-[14px]','bindUserEvents','https://api.perfai.<redacted>?app_id='...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/design-analysis-service/apps/update-category-status:
+    put:
+      operationId: put_api_v1_design-analysis-service_apps_update-category-status
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: });},_0x5ec797=async(_0x3146ad,_0x15974f)=>{const <redacted>,_0x15fec6='https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/update-category-status
+  /api/v1/design-analysis-service/apps/update-issue-status:
+    put:
+      operationId: put_api_v1_design-analysis-service_apps_update-issue-status
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: rieving\x20a\x20<redacted>\x20without\x20refresh\x20<redacted>\x20is\x20not\x20possible.','https://api.perfai.<redacted>',...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/design-analysis-service/apps/update-issue-status
+  /api/v1/dsr-service/app-requests-edit:
+    put:
+      operationId: put_api_v1_dsr-service_app-requests-edit
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: d(0x1105));else try{_0x257545[_0x4bb20d(0x2307)]=!0x0,(await _0x5a861a['patch']('https://api.perfai.<redacted>',JSON[_0x4bb20d(0xc8...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/dsr-service/app-requests-edit
+  /api/v1/integration/github/create:
+    post:
+      operationId: post_api_v1_integration_github_create
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,'rangeIndex','auth_header','June','immediate','Query\x20Parameter\x20Removals','https://api.perfai.<redacted>','bg-blue-500\x20dark:bg...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/integration/github/create
+  /api/v1/integration/jira:
+    get:
+      operationId: get_api_v1_integration_jira
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 9+_0x37ffde(0x116b));}},_0x1e5a1d=async()=>{const <redacted>,_0x230a6e='https://api.perfai.<redacted>';_0x5a861a['get'](_0x230a6e,{'hea...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/integration/jira
+    put:
+      operationId: put_api_v1_integration_jira
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: atasetsUpdate','EXTERNAL','operationId','getCharIndex','danger-modal','$cookie','https://api.perfai.<redacted>','_resetElements','change','px-2\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/integration/jira
+  /api/v1/integration/jira/create:
+    post:
+      operationId: post_api_v1_integration_jira_create
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: '<redacted>','font-bold\x20ml-1\<redacted>\x20dark:text-gray-100','https://api.perfai.<redacted>','no-','testsCount','Enter...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/integration/jira/create
+  /api/v1/issues/design-analysis/single-issue:
+    post:
+      operationId: post_api_v1_issues_design-analysis_single-issue
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ',_0xe72681);}};return(_0x3b4de3,_0x50bf78)':
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  ',_0xe72681);}};return(_0x3b4de3,_0x50bf78)': '>(_0x3468ba(),_0x547250(_0x5741ce,null,[_0x5e5fbd('
+              ex2:
+                value:
+                  ',_0xe72681);}};return(_0x3b4de3,_0x50bf78)': '>(_0x3468ba(),_0x547250(_0x5741ce,null,[_0x5e5fbd('
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: _0x11eb8c(0x2286)]['id'];try{const _0x5575bd=await _0x5a861a[_0x11eb8c(0x42fc)]('https://api.perfai.<redacted>?id='+_0x15dbf1...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/issues/design-analysis/single-issue?id= {",_0xe72681);}};return(_0x3b4de3,_0x50bf78)": ">(_0x3468ba(),_0x547250(_0x5741ce,null,[_0x5e5fbd("}
+
+        Static discovery inferred request body structure.
+  /api/v1/issues/performance/performance-issues:
+    get:
+      operationId: get_api_v1_issues_performance_performance-issues
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0data:',_0x398836);});},_0xe18fa8=async()=>{const <redacted>,_0xa08ef1='https://api.perfai.<redacted>';_0x5a861a[_...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/issues/performance/performance-issues {",_0x398836);});},_0xe18fa8": "async()=>{const _0xb9c23b=_0x569199,_0xa08ef1="}
+
+        Static discovery inferred request body structure.
+  /api/v1/issues/performance/single-issue:
+    post:
+      operationId: post_api_v1_issues_performance_single-issue
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  id: ''
+              ex2:
+                value:
+                  id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 1(0x3518)]=_0x8c66ad['_value']['id'];try{const _0x1183e9=await _0x5a861a['get']('https://api.perfai.<redacted>?id='+_0x15dbf1[_0x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/issues/performance/single-issue?id= {"id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/issues/test/single-issue:
+    post:
+      operationId: post_api_v1_issues_test_single-issue
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  id: ''
+              ex2:
+                value:
+                  id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: _0x19479b(0x2286)]['id'];try{const _0x2b29ec=await _0x5a861a[_0x19479b(0x42fc)]('https://api.perfai.<redacted>?id='+_0x15dbf1['params'][...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/issues/test/single-issue?id= {"id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/learned_models/endpoint:
+    get:
+      operationId: get_api_v1_learned_models_endpoint
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: t:','dddd','Logging','Write\x20(Valid)','camelcase','calc(100vh\x20-\x20380px)','https://api.perfai.<redacted>','flex\x20flex-col\x20item...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/learned_models/endpoint
+  /api/v1/mulesoft-auth-service/apps/test-connection:
+    put:
+      operationId: put_api_v1_mulesoft-auth-service_apps_test-connection
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: e\x20=\x20','aiLogs_stream','OWASP\x20M','onQueue','-.INF','updateSel','mapPos','https://api.perfai.<redacted>','Delet...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/mulesoft-auth-service/apps/test-connection
+  /api/v1/org-users/get_users_orgs:
+    get:
+      operationId: get_api_v1_org-users_get_users_orgs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                additionalProperties: true
+      summary: Observed & discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 4449));if(_0x450f2d)return _0x450f2d;try{const _0x55b813=await _0x5a861a['get']('https://api.perfai.<redacted>',{'headers':_0x5f3c7f}),_... | nually\x20trigger\x20performance\x20reports.','<redacted>','DEFLATE','https://api.perfai.<redacted>','usedDuplicates','FootNo...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/org-users/get_users_orgs
+    options:
+      operationId: options_api_v1_org-users_get_users_orgs
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/orgs/my:
+    get:
+      operationId: get_api_v1_orgs_my
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  org:
+                    type: object
+                  ou:
+                    type: object
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_orgs_my
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    put:
+      operationId: put_api_v1_orgs_my
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: g\x20Examples:\x20','overflowPadding','Z_FINISH','Invalid\x20Email','numbering','https://api.perfai.<redacted>','rememberUpgrade','named-entity','update:...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/orgs/my ,
+
+        Static discovery inferred request body structure.
+  /api/v1/performance-service/apps/create-run:
+    get:
+      operationId: get_api_v1_performance-service_apps_create-run
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: um','blur','Filters','Heading\x202','TodoItem','Select\x20Tags','240','valueOf','https://api.perfai.<redacted>','\x20while\x2...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/performance-service/apps/create-run
+  /api/v1/performance-service/apps/schedule-run:
+    get:
+      operationId: get_api_v1_performance-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 647)](_0x1a337f);});},<redacted>>{const <redacted>,_0x6c8eb6='https://api.perfai.<redacted>?app_id='+_0x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/performance-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/reports/download:
+    post:
+      operationId: post_api_v1_reports_download
+      parameters:
+        - name: _id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  _id: ''
+              ex2:
+                value:
+                  _id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: <redacted>\x20dark:border-gray-700','VPopper','\u00a0Generate\x20Reports','https://api.perfai.<redacted>?_id=','\x20OpenAPI\x20Specificati...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/reports/download?_id= {"_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/run/b2-c:
+    get:
+      operationId: get_api_v1_run_b2-c
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 5),_0x48355b,_0x134d50,_0xac05,_0x23d464)=>{const <redacted>,_0x4d32ea='https://api.perfai.<redacted>?app_id='<redacted>(0x1d9e)+_0x23d...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/run/b2-c?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/run/b2-c/previous:
+    get:
+      operationId: get_api_v1_run_b2-c_previous
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 539fd;_0x2c7de1>0x0&&(_0x30c52e[_0x1bcd6d(0x2307)]=--_0x2c7de1);const _0x13d04b='https://api.perfai.<redacted>?app_id='<redacted>(0x1...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/run/b2-c/previous?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/run/endpoints-global/previous:
+    post:
+      operationId: post_api_v1_run_endpoints-global_previous
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: \x2019l3.35\x20-2','<redacted>','addParent','Download\x20as\x20PDF','https://api.perfai.<redacted>?app_id=','$_applySho...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/run/endpoints-global/previous?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/run/weekly-report:
+    get:
+      operationId: get_api_v1_run_weekly-report
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: x42ee)]=!0x0;}},_0x26dd37=async _0xd05c78=>{const <redacted>,_0x4091ec='https://api.perfai.<redacted>?app_id='+_0xd05c78,_0x56e77f=awa...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/run/weekly-report?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/runs/aiLog-ids-list:
+    get:
+      operationId: get_api_v1_runs_aiLog-ids-list
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 5aa84=async _0x31c1fa=>{const <redacted>;var _0x46fdcc;const _0x2bb0fd='https://api.perfai.<redacted>';try{const _0x298368=await(awa... | Shrink','text-slate-400\x20dark:text-slate-500','\x22,\x20not\x20\x22','CalVer','https://api.perfai.<redacted>?app_id=','Failed\x20to\x20load...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/runs/aiLog-ids-list
+
+        Static discovery inferred request body structure.
+  /api/v1/runs/endpoints:
+    get:
+      operationId: get_api_v1_runs_endpoints
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,_0x182474,_0x2ce202,_0x3f0e82,_0x576d8a)=>{const <redacted>,_0xf08441='https://api.perfai.<redacted>?app_id='<redacted>(0x1d9e...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/runs/endpoints?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/runs/next-endpoints:
+    get:
+      operationId: get_api_v1_runs_next-endpoints
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: d5(0x2307)]=++_0x147a3e),_0x32bc97[_0x2a61d5(0x2307)]=_0x147a3e;const _0x59937f='https://api.perfai.<redacted>?app_id='<redacted>(0...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/runs/next-endpoints?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/coverage_details:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_coverage_details
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: \x20','CORE-003.1:2024','e.g.\x20\x22Content-Type\x22:\<redacted>\x22','https://api.perfai.<redacted>','\x2...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/coverage_details
+  /api/v1/sensitive-data-service/apps/create-custom-issue:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_create-custom-issue
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 151.6c25.5-34.2\x2045.2-87.7\x2055.3-151.6l116.7\x200z','aiLogs-modal','ffffe0','https://api.perfai.<redacted>?ap...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/create-custom-issue?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/dismiss-app-issue:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_dismiss-app-issue
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 0x20bed6[_0x26d81(0x2307)][_0x26d81(0x1a76)]=_0x1f8e89['label'];const _0x5be2d0='https://api.perfai.<redacted>';_0x... | 900/30\x20rounded-lg','create','<redacted>','Failed','main<redacted>s://api.perfai.<redacted>','Un...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/dismiss-app-issue
+  /api/v1/sensitive-data-service/apps/dismiss-issue:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_dismiss-issue
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 9 time(s).
+
+        Discovery snippets: 2832[_0x457d8d(0x2307)]='';},_0x1de75e=()=>{const <redacted>,_0x27b3b5='https://api.perfai.<redacted>';_0x5a86... | _0x2e356a;var _0x52065d;if(!_0x2087fd[_0x1e9e1a(0x2307)])return;const _0x231ab4='https://api.perfai.<redacted>';try{con... | connection','inView','inputType','<redacted>','w-full\x20md:w-[35%]','https://api.perfai.<redacted>','getAll...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/dismiss-issue
+  /api/v1/sensitive-data-service/apps/download-issues-report:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_download-issues-report
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,'checked','_hover','Risk','\x20App,\x20endpoint,\x20and\x20user\x20limits\x20','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/download-issues-report?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/download-issues-report-security:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_download-issues-report-security
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ','<redacted>','You\x20have\x20enabled\x20experimental\x20features:\x20','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/download-issues-report-security?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/download-non-sensitive-data:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_download-non-sensitive-data
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: -flex\x20w-24','https://api.perfai.<redacted>?weeks=3','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/download-non-sensitive-data?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/download-sensitive-data:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_download-sensitive-data
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: _0x57cb89=async()=>{const <redacted>;var _0x5d0121;try{const _0x20317f='https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/download-sensitive-data?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/endpoint-stats:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_endpoint-stats
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ion\x20Removals','#3b82f67f','_parseOpts','fromNow','\x20Total\x20Changes:\x20','https://api.perfai.<redacted>?app_id=...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/endpoint-stats?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_endpoint-stats
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: valid','w10','dropdownOpen','No\x20exploit\x20ID\x20received\x20from\x20server','https://api.perfai.<redacted>','start...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/endpoint-stats
+  /api/v1/sensitive-data-service/apps/generate_sensitive_data_reports:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_generate_sensitive_data_reports
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: a[_0x485a73(0x4449)],<redacted>[_0x485a73(0x2297)];try{const _0x39e0b7='https://api.perfai.<redacted>... | <redacted>','\x22···\x22','isUnmounting','<redacted>\x20h-[450px]','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/generate_sensitive_data_reports?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/get-ai-logs:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-ai-logs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: \x20range\x20for\x20changeset\x20of\x20length\x20','fontSmoothing','app','www.','https://api.perfai.<redacted>','propName...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-ai-logs
+  /api/v1/sensitive-data-service/apps/get-ai-stats:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-ai-stats
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 808b9=_0x13d58d;var _0x3fc419,_0x59b0e2,_0xa891f4,_0xbb3d2a;try{const _0x382f14='https://api.perfai.<redacted>?app_id='+... | tomStyle','account\x20panel\x20>\<redacted>\x20','No\x20Auth','cookieJar','https://api.perfai.<redacted>?app_id=',...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-ai-stats?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/get-dismissed-issues:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-dismissed-issues
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: <redacted>?_id=','bg-red-500','\x20Test\x20Frameworks\x20','SSRF','https://api.perfai.<redacted>',...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-dismissed-issues
+  /api/v1/sensitive-data-service/apps/get-dismissed-issues-ids:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-dismissed-issues-ids
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0ID\x20<redacted>\x20expected\x20\x22','<redacted>.svg','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-dismissed-issues-ids
+  /api/v1/sensitive-data-service/apps/get-dismissed-issues-ids-security:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-dismissed-issues-ids-security
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0x1;},_0x164b4c=async _0x89cf62=>{const <redacted>;try{const _0x47ddeb='https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-dismissed-issues-ids-security
+  /api/v1/sensitive-data-service/apps/get-dismissed-issues-security:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-dismissed-issues-security
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: e-700\<redacted>','isFinite','Sensitive\x20Data\x20Exposure','drawCursor','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-dismissed-issues-security
+  /api/v1/sensitive-data-service/apps/get-endpoint-stats:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-endpoint-stats
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: >{const <redacted>;try{_0x13c1eb[_0x1a9efe(0x2307)]=!0x0;let _0x52b408='https://api.perfai.<redacted>?app... | 01s\x20infinite','#c084fc','Results','w-1.5\x20h-1.5\x20mr-1.5\x20rounded-full','https://api.perfai.<redacted>?app...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-endpoint-stats?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/get-error-flags:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-error-flags
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: t','<redacted>','bad\x20indentation\x20of\x20a\x20mapping\x20entry','https://api.perfai.<redacted>','code...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-error-flags
+  /api/v1/sensitive-data-service/apps/get-fields:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-fields
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 019h-13a2\x202\x200\x201\x201\x200\x20-4h4a2\x202\x200\x201\x200\x200\x20-4h-3','https://api.perfai.<redacted>','^[^/\x5c\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-fields
+  /api/v1/sensitive-data-service/apps/get-log-ids-stats:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-log-ids-stats
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 20','<span\x20class=\<redacted>\x22>\x22alg\x22:\x20\x22HS256\x22</span>','https://api.perfai.<redacted>','w-...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-log-ids-stats
+  /api/v1/sensitive-data-service/apps/get-test-cases:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-test-cases
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: FFF','skidding','CVSS\x20Score:','onload','localeData','Thinking...','filtered','https://api.perfai.<redacted>','$gtm'...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-test-cases
+  /api/v1/sensitive-data-service/apps/get-test-cases-ids:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-test-cases-ids
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: const <redacted>;var _0x71a8d7,_0x41cfc8,_0x4c4ad8;try{const _0x5c673e='https://api.perfai.<redacted>',_0... | nidP','<redacted>','Root','ENTITIES','deadEnd','getPrototypeOf','https://api.perfai.<redacted>?app...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-test-cases-ids
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/get-test-plan:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_get-test-plan
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ,'cm-lineWrapping','Sensitive\x20data\x20reports\x20generated\x20successfully.','https://api.perfai.<redacted>','ml-7\x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/get-test-plan
+  /api/v1/sensitive-data-service/apps/issues-single-update:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_issues-single-update
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: veCount','Apr','<redacted>','auth-modal','light','Functional\x20Testing','https://api.perfai.<redacted>',...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/issues-single-update
+  /api/v1/sensitive-data-service/apps/org_issues_security:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_org_issues_security
+      parameters:
+        - name: owaspTypes
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_sensitive-data-service_apps_org_issues_security
+      parameters:
+        - name: owaspTypes
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: severities
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/sensitive-data-service/apps/remove-fields:
+    delete:
+      operationId: delete_api_v1_sensitive-data-service_apps_remove-fields
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: scaleRanges','/word/document.xml','invert','Ctrl-t','memory','<redacted>','https://api.perfai.<redacted>','indent...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/remove-fields
+  /api/v1/sensitive-data-service/apps/restore-issue:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_restore-issue
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: rong>Enumeration\x20Attacks:</strong>\x20','False','<redacted>','clearer','https://api.perfai.<redacted>','data-v...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/restore-issue
+  /api/v1/sensitive-data-service/apps/runhistory:
+    put:
+      operationId: put_api_v1_sensitive-data-service_apps_runhistory
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: v-38.373c0-11.497-9.32-20.818-20.818-20.818z','lastUpdate','<redacted>','https://api.perfai.<redacted>?app_id=','s...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/runhistory?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/schedule-run:
+    post:
+      operationId: post_api_v1_sensitive-data-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ement','\x22offset\x22\x20is\x20outside\x20of\x20buffer\x20bounds','duplicated','https://api.perfai.<redacted>?app_id=',...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/sensitive-data-service/apps/single-stats:
+    put:
+      operationId: put_api_v1_sensitive-data-service_apps_single-stats
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: entChatProgress','toHex32','patchFlag','<redacted>','_content','m-1.5','https://api.perfai.<redacted>','Downloa...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/single-stats
+  /api/v1/sensitive-data-service/apps/update-issue-severity:
+    put:
+      operationId: put_api_v1_sensitive-data-service_apps_update-issue-severity
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: nst <redacted>;if(!_0x3b5047[_0xb0c082(0x2307)])return;const _0x1bf7f6='https://api.perfai.<redacted>'... | <redacted>\x20duration-150\<redacted>\x20relative','cm-readonly','https://api.perfai.<redacted>'...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/update-issue-severity
+  /api/v1/sensitive-data-service/apps/updateStatus:
+    put:
+      operationId: put_api_v1_sensitive-data-service_apps_updateStatus
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 20Priority\x20','<redacted>','narrow','flex\x20space-x-1','TourApi','https://api.perfai.<redacted>','flex\x2...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/updateStatus
+  /api/v1/sensitive-data-service/apps/update_rbac_map:
+    put:
+      operationId: put_api_v1_sensitive-data-service_apps_update_rbac_map
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 'Error\x20validating\x20credentials:','lowKashida','<redacted>','#FFCE56','https://api.perfai.<redacted>','\x20...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/sensitive-data-service/apps/update_rbac_map
+  /api/v1/spec-validation/app:
+    put:
+      operationId: put_api_v1_spec-validation_app
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: d','CRM','w:updateFields','calc','dyn_ltree','<redacted>','ModalBasic','https://api.perfai.<redacted>','Spec\x20ID\x20is\x20missing...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/app/
+  /api/v1/spec-validation/apps:
+    delete:
+      operationId: delete_api_v1_spec-validation_apps
+      parameters:
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 4 time(s).
+
+        Discovery snippets: 24f([]),_0x1c1d6c=async _0x1ecab4=>{const <redacted>;try{let _0x4309a1='https://api.perfai.<redacted>?pageSize=1000';const _0x4c08b... | beforeInit','relative\x20inline-flex\x20w-32','_devtoolHook','Remove','dueDate','https://api.perfai.<redacted>?','API\x20Base\x20Path','</pr...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/apps?pageSize=1000 {"pageSize": "1000"}
+
+        Static discovery inferred request body structure.
+  /api/v1/spec-validation/dashboard/graphs/issues-by-type:
+    post:
+      operationId: post_api_v1_spec-validation_dashboard_graphs_issues-by-type
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                limit:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  limit: '10'
+              ex2:
+                value:
+                  limit: '10'
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: space','YYYY-MM-DD','\x20Upload\x20OpenAPI\x20YAML/JSON\x20','<redacted>','https://api.perfai.<redacted>?li...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/dashboard/graphs/issues-by-type?limit=10 {"limit": "10"}
+
+        Static discovery inferred request body structure.
+  /api/v1/spec-validation/graphs/issues-trend:
+    put:
+      operationId: put_api_v1_spec-validation_graphs_issues-trend
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ','backoff','p-4\x20flex-grow','w:overflowPunct','nextOverlapping','US\x20EAST','https://api.perfai.<redacted>','setRoot','ac...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/graphs/issues-trend
+  /api/v1/spec-validation/graphs/stable-unstable-apis:
+    get:
+      operationId: get_api_v1_spec-validation_graphs_stable-unstable-apis
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: dfe(0x2307)]=null;try{await _0x223534();const _0x38e10d=(await _0x5a861a['get']('https://api.perfai.<redacted>',{'hea...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/graphs/stable-unstable-apis
+  /api/v1/spec-validation/runs:
+    get:
+      operationId: get_api_v1_spec-validation_runs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 00\x20text-sm','passStatus','onopennamespace','was','intersecting','rows-input','https://api.perfai.<redacted>','<redacted>','9...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/runs/
+  /api/v1/spec-validation/schedule-run:
+    put:
+      operationId: put_api_v1_spec-validation_schedule-run
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: iewUpdate','autoSize','pii_data.csv','0.2','sum32_3','isComingSoon','macroName','https://api.perfai.<redacted>','<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/schedule-run/
+  /api/v1/spec-validation/test:
+    get:
+      operationId: get_api_v1_spec-validation_test
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ry{const <redacted>['value']['__raw'],_0x3459fd=await _0x5a861a['get']('https://api.perfai.<redacted>'+_0x4d1929,{'headers':{'Auth...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/test/
+  /api/v1/spec-validation/tests:
+    put:
+      operationId: put_api_v1_spec-validation_tests
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: .','_dataset','placeItems','passphrase','text-green-600\x20dark:text-green-400','https://api.perfai.<redacted>','setTimeoutFn','\x0a\x20\x...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/spec-validation/tests/
+  /api/v1/tasks/abort:
+    get:
+      operationId: get_api_v1_tasks_abort
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ive','Yellow','safeLoadAll','staticCount','inner','w-full\<redacted>','https://api.perfai.<redacted>','usageTotal','objective','onPrint','...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/tasks/abort/
+  /api/v1/test-plan-service/apps/endpoints:
+    get:
+      operationId: get_api_v1_test-plan-service_apps_endpoints
+      parameters:
+        - name: catalog_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: App','_state','Mod-/','Path\x20Parameter\<redacted>','PROGRESS','getLine','https://api.perfai.<redacted>?catalog_id=','app...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-plan-service/apps/endpoints?catalog_id= {"catalog_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/test-plan-service/apps/schedule-run:
+    get:
+      operationId: get_api_v1_test-plan-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0the\x20scopes\x20provided\x20by\x20slack\x20in\x20bot\x20<redacted>\x20scopes.\x20','https://api.perfai.<redacted>?app_id=','Erro...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-plan-service/apps/schedule-run?app_id= ,
+
+        Static discovery inferred request body structure.
+  /api/v1/test-service/apps:
+    get:
+      operationId: get_api_v1_test-service_apps
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:fetch-call, javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 7b3e};},_0x3ffa0f=async()=>{const <redacted>;try{const _0x868eed=await fetch('https://api.perfai.<redacted>?id='+_0x3a68dd['params']['... | },_0x3ffa0f=async()=>{const <redacted>;try{const _0x868eed=await fetch('https://api.perfai.<redacted>?id='+_0x3a68dd['params']['id'],{...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-service/apps?id= JSON[_0x26a857(0xc8f
+
+        Static discovery inferred request body structure.
+  /api/v1/test-service/apps/create-run:
+    post:
+      operationId: post_api_v1_test-service_apps_create-run
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 20data\x20available','<redacted>','inline<redacted>s','statusTemplate','Map(','https://api.perfai.<redacted>','sunos','useAddition...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-service/apps/create-run
+  /api/v1/test-service/apps/save-run:
+    get:
+      operationId: get_api_v1_test-service_apps_save-run
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:fetch-call, javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: ai');}},_0x54fbf2=async()=>{const <redacted>;try{const _0xdb5e53=await fetch('https://api.perfai.<redacted>?id='+_0x3a68dd[_0... | },_0x54fbf2=async()=>{const <redacted>;try{const _0xdb5e53=await fetch('https://api.perfai.<redacted>?id='+_0x3a68dd[_0x3a51d...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-service/apps/save-run?id= JSON[_0x3a51d8(0xc8f
+
+        Static discovery inferred request body structure.
+  /api/v1/test-service/apps/schedule-run:
+    get:
+      operationId: get_api_v1_test-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 647)](_0x213ae8);});},<redacted>>{const <redacted>,_0x53b9e3='https://api.perfai.<redacted>?app_id='+_0x28453a;...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/test/runs/endpoints:
+    post:
+      operationId: post_api_v1_test_runs_endpoints
+      parameters:
+        - name: catalog_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                catalog_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  catalog_id: ''
+              ex2:
+                value:
+                  catalog_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0','Total\x20Issues','flex\x20flex-col\x20gap-2\<redacted>','#61afef','https://api.perfai.<redacted>?catalog_id=','isError','Start\...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/test/runs/endpoints?catalog_id= {"catalog_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/users/post-login:
+    options:
+      operationId: options_api_v1_users_post-login
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_api_v1_users_post-login
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+              additionalProperties: true
+            examples:
+              ex1:
+                value: {}
+      summary: Observed & discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 4[_0x5a4514(0xe62)][_0x5a4514(0x2ce9)]};try{(await _0x5a861a[_0x5a4514(0x35f7)]('https://api.perfai.<redacted>',{},{'headers':_0x282591}))[_0x5a...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/users/post-login
+  /api/v1/users/remove-user-access:
+    delete:
+      operationId: delete_api_v1_users_remove-user-access
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: ','top10','slate','<redacted>','[object\x20ShadowRoot]','targetNotFound','https://api.perfai.<redacted>','AES-GCM','responseText'...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/users/remove-user-access
+  /api/v1/users/update:
+    put:
+      operationId: put_api_v1_users_update
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: 0x1f1f)+_0xb9ba07);});},_0x369744=async()=>{const <redacted>,_0x9747f2='https://api.perfai.<redacted>';_0x5a861a[_0x7ad3ba(0x35f7)](_0x9747...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/users/update
+  /api/v1/version-management-service/apps/api-version-by-catalogId:
+    get:
+      operationId: get_api_v1_version-management-service_apps_api-version-by-catalogId
+      parameters:
+        - name: catalog_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: _0x44fd4a;var _0x39153c,_0x42ab3c,_0x5cb9dc,_0x3aa8f7,_0x22f73c;const _0x11157b='https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/api-version-by-catalogId?catalog_id= {"catalog_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/version-management-service/apps/api_version_download_yaml:
+    get:
+      operationId: get_api_v1_version-management-service_apps_api_version_download_yaml
+      parameters:
+        - name: _id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: x1;}},_0x41d0c8=async _0x400c7b=>{const <redacted>;try{const _0x26ad4c='https://api.perfai.<redacted>... | \x20dark:bg-slate-700\<redacted>\x20dark:text-white\x20shadow-sm','am3d','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/api_version_download_yaml?_id= {"_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/version-management-service/apps/changelog:
+    get:
+      operationId: get_api_v1_version-management-service_apps_changelog
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: x51f110;console[_0x1cac25(0x3114)](_0x1cac25(0x3d51),_0x30a10a);const _0x58ebf8='https://api.perfai.<redacted>?app_id='... | 27a(0x2825)];}},_0x3d808f=async _0x5da334=>{const <redacted>,_0x47bd24='https://api.perfai.<redacted>?app_id='...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/changelog?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/version-management-service/apps/runhistory:
+    get:
+      operationId: get_api_v1_version-management-service_apps_runhistory
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: 5914(0x2307)];},_0x4a9ad2=async _0x70e7f6=>{const <redacted>,_0x3bb70b='https://api.perfai.<redacted>?app_id=... | authorization','Duplex','#e2f2ff','_week','totalSavings','getPadding','sum32_4','https://api.perfai.<redacted>?app_id=...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/runhistory?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/version-management-service/apps/schedule-run:
+    get:
+      operationId: get_api_v1_version-management-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: x326f5d[_0x55d4e2(0x3b49)][_0x55d4e2(0xe60)](_0x55d4e2(0x1f71));const _0x24a381='https://api.perfai.<redacted>?app_i...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+    post:
+      operationId: post_api_v1_version-management-service_apps_schedule-run
+      parameters:
+        - name: app_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app_id:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  app_id: ''
+              ex2:
+                value:
+                  app_id: ''
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: text-red-400\x20dark:hover:bg-red-800/40','Alt-ArrowDown','<redacted>','https://api.perfai.<redacted>?app_i...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/schedule-run?app_id= {"app_id": ""}
+
+        Static discovery inferred request body structure.
+  /api/v1/version-management-service/apps/update-version-number:
+    put:
+      operationId: put_api_v1_version-management-service_apps_update-version-number
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://cloud.perfai.<redacted>.js
+
+        Discovered 3 time(s).
+
+        Discovery snippets: x20lg:<redacted>:block\x202xl:block','%Reflect.apply%','mouseout','Meta-','https://api.perfai.<redacted>...
+
+        Inferred example: GET https://api.perfai.ai/api/v1/version-management-service/apps/update-version-number
+  /authorize:
+    get:
+      operationId: get_authorize
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client_id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: prompt
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /favicon.ico:
+    get:
+      operationId: get_favicon.ico
+      parameters: []
+      responses:
+        '404':
+          description: HTTP 404
+          content:
+            text/plain:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /login:
+    get:
+      operationId: get_login
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: protocol
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /login/callback:
+    post:
+      operationId: post_login_callback
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                wa:
+                  type: string
+                wresult:
+                  type: string
+                wctx:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  wa: wsignin1.0
+                  wresult: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoiNjg2Y2YxOWQzN2I0MjkyYWM0ZTQ4ZTllIiwiZW1haWwiOiJhYmR1bC1yYWhtYW5AcGVyZmFpLmFpIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImxhc3RfcGFzc3dvcmRfcmVzZXQiOiIyMDI1LTA3LTIzVDA2OjMzOjQ4LjEwOVoiLCJzaWQiOiI0dERJLXlGSnBiWTZLcjZ3Yi10QW5TNFNxaWRvZjh6aSIsImlhdCI6MTc2MTgyNDc2OSwiZXhwIjoxNzYxODI0ODI5LCJhdWQiOiJ1cm46YXV0aDA6ZGV2LXkzNDUwYjQyY3d5OHZ5bDE6VXNlcm5hbWUtUGFzc3dvcmQtQXV0aGVudGljYXRpb24iLCJpc3MiOiJ1cm46YXV0aDAifQ.ZpA3p-7usdduwK4-qxZyQisdZGyF1U-EpoYjP57FuoyApoFKh5eAJW74X3JdH9TZXaBfJrdEEAO9Pia7Ozg6L8PxuOftUzndhG-LtJVBvbLemSumuD2mcOhp_uaZSygEln9n5WaHczZPvfTIz04tqbEbXsJRuFKK43LVe4KC8raW9S71Gt9fKL9I45hdCO0gwcttqlaEJr-FXydzQUlFP3p81qi2DGuSQ9tYRvUI1YNMVvGTJ2yeeCJQFbfKlpeF8ZGs9VddKV7Saik3JB72q0K7-1i9sFk_qo93zCBlda-PYLDYhNA-efwU4jl3Bsh_YpJ_NBfG474lclyy1k8WDw
+                  wctx: '{&#34;strategy&#34;:&#34;auth0&#34;,&#34;auth0Client&#34;:&#34;eyJuYW1lIjoiYXV0aDAuanMtdWxwIiwidmVyc2lvbiI6IjkuMjguMCJ9&#34;,&#34;tenant&#34;:&#34;dev-y3450b42cwy8vyl1&#34;,&#34;connection&#34;:&#34;Username-Password-Authentication&#34;,&#34;client_id&#34;:&#34;OxipoJS8EIdpN3KzhVQ280zkKxwzGLfI&#34;,&#34;response_type&#34;:&#34;code&#34;,&#34;scope&#34;:&#34;openid profile email&#34;,&#34;redirect_uri&#34;:&#34;https://cloud.perfai.ai/&#34;,&#34;state&#34;:&#34;hKFo2SBPX3U2cVZPRGljaTFpVmRjWWl0cUZDSXo4X1FXd0JFTaFupWxvZ2luo3RpZNkgb21aQTlvWFRKcjRVaUl1Zm4xdnFYeWdWMEZpT2JqZVOjY2lk2SBPeGlwb0pTOEVJZHBOM0t6aFZRMjgwemtLeHd6R0xmSQ&#34;,&#34;sid&#34;:&#34;4tDI-yFJpbY6Kr6wb-tAnS4Sqidof8zi&#34;,&#34;realm&#34;:&#34;Username-Password-Authentication&#34;}'
+              ex2:
+                value:
+                  wa: wsignin1.0
+                  wresult: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoiNjg2Y2YxOWQzN2I0MjkyYWM0ZTQ4ZTllIiwiZW1haWwiOiJhYmR1bC1yYWhtYW5AcGVyZmFpLmFpIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImxhc3RfcGFzc3dvcmRfcmVzZXQiOiIyMDI1LTA3LTIzVDA2OjMzOjQ4LjEwOVoiLCJzaWQiOiI0dERJLXlGSnBiWTZLcjZ3Yi10QW5TNFNxaWRvZjh6aSIsImlhdCI6MTc2MTgyNDc2OSwiZXhwIjoxNzYxODI0ODI5LCJhdWQiOiJ1cm46YXV0aDA6ZGV2LXkzNDUwYjQyY3d5OHZ5bDE6VXNlcm5hbWUtUGFzc3dvcmQtQXV0aGVudGljYXRpb24iLCJpc3MiOiJ1cm46YXV0aDAifQ.ZpA3p-7usdduwK4-qxZyQisdZGyF1U-EpoYjP57FuoyApoFKh5eAJW74X3JdH9TZXaBfJrdEEAO9Pia7Ozg6L8PxuOftUzndhG-LtJVBvbLemSumuD2mcOhp_uaZSygEln9n5WaHczZPvfTIz04tqbEbXsJRuFKK43LVe4KC8raW9S71Gt9fKL9I45hdCO0gwcttqlaEJr-FXydzQUlFP3p81qi2DGuSQ9tYRvUI1YNMVvGTJ2yeeCJQFbfKlpeF8ZGs9VddKV7Saik3JB72q0K7-1i9sFk_qo93zCBlda-PYLDYhNA-efwU4jl3Bsh_YpJ_NBfG474lclyy1k8WDw
+                  wctx: '{&#34;strategy&#34;:&#34;auth0&#34;,&#34;auth0Client&#34;:&#34;eyJuYW1lIjoiYXV0aDAuanMtdWxwIiwidmVyc2lvbiI6IjkuMjguMCJ9&#34;,&#34;tenant&#34;:&#34;dev-y3450b42cwy8vyl1&#34;,&#34;connection&#34;:&#34;Username-Password-Authentication&#34;,&#34;client_id&#34;:&#34;OxipoJS8EIdpN3KzhVQ280zkKxwzGLfI&#34;,&#34;response_type&#34;:&#34;code&#34;,&#34;scope&#34;:&#34;openid profile email&#34;,&#34;redirect_uri&#34;:&#34;https://cloud.perfai.ai/&#34;,&#34;state&#34;:&#34;hKFo2SBPX3U2cVZPRGljaTFpVmRjWWl0cUZDSXo4X1FXd0JFTaFupWxvZ2luo3RpZNkgb21aQTlvWFRKcjRVaUl1Zm4xdnFYeWdWMEZpT2JqZVOjY2lk2SBPeGlwb0pTOEVJZHBOM0t6aFZRMjgwemtLeHd6R0xmSQ&#34;,&#34;sid&#34;:&#34;4tDI-yFJpbY6Kr6wb-tAnS4Sqidof8zi&#34;,&#34;realm&#34;:&#34;Username-Password-Authentication&#34;}'
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: html:form
+
+        Discovery contexts: https://auth.perfai.ai/username<redacted>
+
+        Discovered 1 time(s).
+
+        Discovery snippets: <form method="post" name="hiddenform" action="https://auth.perfai.<redacted>">
+            <input type="hidden" name="wa" value="wsignin1.0">
+            <input type="hi...
+
+        Inferred example: POST https://auth.perfai.ai/login/callback {"wa": "wsignin1.0", "wresult": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VyX2lkIjoiNjg2Y2YxOWQzN2I0MjkyYWM0ZTQ4ZTllIiwiZW1haWwiOiJhYmR1bC1yYWhtYW5AcGVyZmFpLmFpIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImxhc3RfcGFzc3dvcmRfcmVzZXQiOiIyMDI1LTA3LTIzVDA2OjMzOjQ4LjEwOVoiLCJzaWQiOiI0dERJLXlGSnBiWTZLcjZ3Yi10QW5TNFNxaWRvZjh6aSIsImlhdCI6MTc2MTgyNDc2OSwiZXhwIjoxNzYxODI0ODI5LCJhdWQiOiJ1cm46YXV0aDA6ZGV2LXkzNDUwYjQyY3d5OHZ5bDE6VXNlcm5hbWUtUGFzc3dvcmQtQXV0aGVudGljYXRpb24iLCJpc3MiOiJ1cm46YXV0aDAifQ.ZpA3p-7usdduwK4-qxZyQisdZGyF1U-EpoYjP57FuoyApoFKh5eAJW74X3JdH9TZXaBfJrdEEAO9Pia7Ozg6L8PxuOftUzndhG-LtJVBvbLemSumuD2mcOhp_uaZSygEln9n5WaHczZPvfTIz04tqbEbXsJRuFKK43LVe4KC8raW9S71Gt9fKL9I45hdCO0gwcttqlaEJr-FXydzQUlFP3p81qi2DGuSQ9tYRvUI1YNMVvGTJ2yeeCJQFbfKlpeF8ZGs9VddKV7Saik3JB72q0K7-1i9sFk_qo93zCBlda-PYLDYhNA-efwU4jl3Bsh_YpJ_NBfG474lclyy1k8WDw", "wctx": "{&#34;strategy&#34;:&#34;auth0&#34;,&#34;auth0Client&#34;:&#34;eyJuYW1lIjoiYXV0aDAuanMtdWxwIiwidmVyc2lvbiI6IjkuMjguMCJ9&#34;,&#34;tenant&#34;:&#34;dev-y3450b42cwy8vyl1&#34;,&#34;connection&#34;:&#34;Username-Password-Authentication&#34;,&#34;client_id&#34;:&#34;OxipoJS8EIdpN3KzhVQ280zkKxwzGLfI&#34;,&#34;response_type&#34;:&#34;code&#34;,&#34;scope&#34;:&#34;openid profile email&#34;,&#34;redirect_uri&#34;:&#34;https://cloud.perfai.ai/&#34;,&#34;state&#34;:&#34;hKFo2SBPX3U2cVZPRGljaTFpVmRjWWl0cUZDSXo4X1FXd0JFTaFupWxvZ2luo3RpZNkgb21aQTlvWFRKcjRVaUl1Zm4xdnFYeWdWMEZpT2JqZVOjY2lk2SBPeGlwb0pTOEVJZHBOM0t6aFZRMjgwemtLeHd6R0xmSQ&#34;,&#34;sid&#34;:&#34;4tDI-yFJpbY6Kr6wb-tAnS4Sqidof8zi&#34;,&#34;realm&#34;:&#34;Username-Password-Authentication&#34;}"}
+
+        Static discovery inferred request body structure.
+  /oauth/token:
+    options:
+      operationId: options_oauth_token
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_oauth_token
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  id_token:
+                    type: string
+                  scope:
+                    type: string
+                  expires_in:
+                    type: integer
+                  token_type:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /usernamepassword/login:
+    post:
+      operationId: post_usernamepassword_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                client_id:
+                  type: string
+                redirect_uri:
+                  type: string
+                tenant:
+                  type: string
+                response_type:
+                  type: string
+                scope:
+                  type: string
+                _csrf:
+                  type: string
+                state:
+                  type: string
+                _intstate:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+                captcha:
+                  type: string
+                connection:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  client_id: <redacted>
+                  redirect_uri: https://cloud.perfai.ai/
+                  tenant: <redacted>
+                  response_type: code
+                  scope: openid profile email
+                  _csrf: <redacted>
+                  state: <redacted>
+                  _intstate: deprecated
+                  username: abdul-rahman@perfai.ai
+                  password: <redacted>
+                  captcha: ''
+                  connection: Username-<redacted>
+      summary: Observed endpoint
+  /assets/{slug}:
+    get:
+      operationId: get_assets_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/javascript:
+              schema:
+                type: string
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /home:
+    get:
+      operationId: get_home
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
