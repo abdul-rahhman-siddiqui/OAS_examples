@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: PerfAI API
+  title: INSTAGRAM
   version: 1.0.0
   description: Auto-generated from requests.jsonl
   x-generated-at: '2025-10-31T11:56:27Z'
