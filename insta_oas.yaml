@@ -1,0 +1,4110 @@
+openapi: 3.0.3
+info:
+  title: PerfAI API
+  version: 1.0.0
+  description: Auto-generated from requests.jsonl
+  x-generated-at: '2025-10-31T11:56:27Z'
+servers:
+  - url: https://familycenter.instagram.com
+  - url: https://graph.instagram.com
+  - url: https://help.instagram.com
+  - url: https://instagram.fhyd2-3.fna.fbcdn.net
+  - url: https://reg-e2ee.instagram.com
+  - url: https://static.cdninstagram.com
+  - url: https://www.instagram.com
+paths:
+  /accounts:
+    delete:
+      operationId: delete_accounts
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://static.cdninstagram.com/rsrc.<redacted>.js
+
+        Discovered 6 time(s).
+
+        Discovery snippets: unction(a,b,c,d,e,f,g,h){"use strict";var i,j=i||d("react");function a(a){return"https://familycenter.instagram.com/accounts/"+a+"/remove"}function k(a){return" | n"https://familycenter.instagram.com/accounts/"+a+"/remove"}function k(a){return"https://familycenter.instagram.com/accounts/"+a+"/?<redacted>"}func...
+
+        Inferred example: GET https://familycenter.instagram.com/accounts/
+  /dashboard:
+    get:
+      operationId: get_dashboard
+      parameters:
+        - name: entrypoint
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: fc_session_id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: javascript:string
+
+        Discovery contexts: https://www.instagram.<redacted>
+
+        Discovered 12 time(s).
+
+        Discovery snippets: tings_screen":{"error":false,"result":{"type":"route_redirect","exports":{"url":"https://familycenter.instagram.com/dashboard/?<redacted>&fc_ses... | am":null,"<redacted>":{},"useCurrentPath":false},"redirect_url":"https://familycenter.instagram.com/dashboard/?<redacted>&fc_ses...
+
+        Inferred example: GET https://familycenter.instagram.com/dashboard/?entrypoint=supervision_web&fc_session_id=f0f84238-2ff9-4afa-a58b-452c4e0dd1f9 {"entrypoint": "supervision_web", "fc_session_id": "f0f84238-2ff9-4afa-a58b-452c4e0dd1f9"}
+
+        Static discovery inferred request body structure.
+  /logging_client_events:
+    options:
+      operationId: options_logging_client_events
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_logging_client_events
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  checksum:
+                    type: string
+                  config:
+                    type: string
+                  config_owner_id:
+                    type: string
+                  app_data:
+                    type: string
+                  qpl_version:
+                    type: string
+                  client_debug_config:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /ajax/bootloader-endpoint:
+    get:
+      operationId: get_ajax_bootloader-endpoint
+      parameters:
+        - name: __a
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __ccg
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __comet_req
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __crn
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __csr
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __d
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __dyn
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hblp
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hs
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hsdp
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hsi
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __req
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __rev
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __s
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __sjsp
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_b
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_r
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_t
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __user
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: dpr
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: fb_dtsg_ag
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: jazoest
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: modules
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nb_modules
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /ajax/bulk-route-definitions:
+    post:
+      operationId: post_ajax_bulk-route-definitions
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /ajax/bz:
+    post:
+      operationId: post_ajax_bz
+      parameters:
+        - name: __a
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __ccg
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __comet_req
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __crn
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __d
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hs
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __hsi
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __req
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __rev
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __s
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_b
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_r
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_t
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __user
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: dpr
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: fb_dtsg
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: jazoest
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: lsd
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: ph
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /ajax/qm:
+    post:
+      operationId: post_ajax_qm
+      parameters:
+        - name: __a
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __comet_req
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __user
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: jazoest
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /v/{slug}/{slug2}:
+    get:
+      operationId: get_v_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: _nc_cat
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: _nc_gid
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: _nc_ht
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: _nc_oc
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: _nc_ohc
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: _nc_sid
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: ccb
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: edm
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: efg
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: oe
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: oh
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: stp
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v2/fb_icdc_fetch:
+    post:
+      operationId: post_v2_fb_icdc_fetch
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  device_identities:
+                    type: array
+                    items:
+                      type: object
+                  icdc_seq:
+                    type: integer
+                  status:
+                    type: integer
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /v2/{slug}:
+    post:
+      operationId: post_v2_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  icdc_success:
+                    type: boolean
+                  product:
+                    type: string
+                  status:
+                    type: integer
+                  type:
+                    type: string
+                  wa_device_id:
+                    type: integer
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /btmanifest/{id}/instagram/main:
+    get:
+      operationId: get_btmanifest_{id}_instagram_main
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /rsrc.php/v4/y0/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y0_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y2/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y2_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y3/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y3_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y5/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y5_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y6/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y6_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y7/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y7_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y9/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y9_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yA/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yA_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yB/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yB_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yC/r/NefKJHJiHOW.js:
+    get:
+      operationId: get_rsrc.php_v4_yC_r_NefKJHJiHOW.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yC/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yC_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yD/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yD_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yF/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yF_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yH/r/huvbEnVgGku.js:
+    get:
+      operationId: get_rsrc.php_v4_yH_r_huvbEnVgGku.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yH/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yH_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yI/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yI_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yJ/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yJ_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yK/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yK_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yL/r/LGjCSEVwGzW.js:
+    get:
+      operationId: get_rsrc.php_v4_yL_r_LGjCSEVwGzW.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yL/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yL_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yM/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yM_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yN/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yN_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yP/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yP_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yR/r/vGuOYYzARZC.js:
+    get:
+      operationId: get_rsrc.php_v4_yR_r_vGuOYYzARZC.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yR/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yR_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yS/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yS_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yT/r/PFZboEdlnwd.js:
+    get:
+      operationId: get_rsrc.php_v4_yT_r_PFZboEdlnwd.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yT/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yT_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yU/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yU_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yV/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yV_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yW/r/yjTblnXoOOd.js:
+    get:
+      operationId: get_rsrc.php_v4_yW_r_yjTblnXoOOd.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yX/r/feZkMdHMygO.js:
+    get:
+      operationId: get_rsrc.php_v4_yX_r_feZkMdHMygO.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yX/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yX_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yY/r/qWITHwq-vni.js:
+    get:
+      operationId: get_rsrc.php_v4_yY_r_qWITHwq-vni.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yZ/r/CwrhrxRXkfi.js:
+    get:
+      operationId: get_rsrc.php_v4_yZ_r_CwrhrxRXkfi.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yZ/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yZ_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/y_/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_y__r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/ya/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_ya_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yb/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yb_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yc/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yc_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yd/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yd_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/ye/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_ye_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yf/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yf_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yh/r/YujdAnLoQnm.js:
+    get:
+      operationId: get_rsrc.php_v4_yh_r_YujdAnLoQnm.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yh/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yh_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yj/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yj_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yk/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yk_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/ym/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_ym_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yn/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yn_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yp/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yp_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yq/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yq_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/ys/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_ys_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yv/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yv_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yx/r/RYutQPX-pHl.js:
+    get:
+      operationId: get_rsrc.php_v4_yx_r_RYutQPX-pHl.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yy/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yy_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yz/r/LQYfgSSFYxz.js:
+    get:
+      operationId: get_rsrc.php_v4_yz_r_LQYfgSSFYxz.js
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v4/yz/r/{slug}:
+    get:
+      operationId: get_rsrc.php_v4_yz_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/y9/l/{slug}/{slug2}:
+    get:
+      operationId: get_rsrc.php_v5_y9_l_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/yA/l/{slug}/{slug2}:
+    get:
+      operationId: get_rsrc.php_v5_yA_l_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/yC/l/{slug}/{slug2}:
+    get:
+      operationId: get_rsrc.php_v5_yC_l_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/yH/l/{slug}/{slug2}:
+    get:
+      operationId: get_rsrc.php_v5_yH_l_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/yY/l/{slug}/{slug2}:
+    get:
+      operationId: get_rsrc.php_v5_yY_l_{slug}_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/ya/l/{slug}/JuzLSylKhQl.css:
+    get:
+      operationId: get_rsrc.php_v5_ya_l_{slug}_JuzLSylKhQl.css
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/v5/yv/l/{slug}/IYRghhqJa_q.css:
+    get:
+      operationId: get_rsrc.php_v5_yv_l_{slug}_IYRghhqJa_q.css
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/yR/r/{slug}:
+    get:
+      operationId: get_rsrc.php_yR_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/wasm:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/ye/r/{slug}:
+    get:
+      operationId: get_rsrc.php_ye_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/wasm:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/yl/r/{slug}:
+    get:
+      operationId: get_rsrc.php_yl_r_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/wasm:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y-/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y-_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y0/l/en_US-j/fKxKToEEY-L.js:
+    get:
+      operationId: get_rsrc.php_{slug}_y0_l_en_US-j_fKxKToEEY-L.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y0/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y0_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y1/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y1_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y2/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y2_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y3/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y3_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y4/l/en_US-j/BVXbSCXYXmP.js:
+    get:
+      operationId: get_rsrc.php_{slug}_y4_l_en_US-j_BVXbSCXYXmP.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y4/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y4_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y5/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y5_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y6/l/en_US-j/MlaKOvNeqop.js:
+    get:
+      operationId: get_rsrc.php_{slug}_y6_l_en_US-j_MlaKOvNeqop.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y6/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y6_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y7/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y7_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y8/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y8_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y9/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y9_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yA/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yA_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yB/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yB_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yC/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yC_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yE/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yE_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yF/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yF_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yF/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yF_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yG/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yG_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yH/l/en_US-j/GacgGQiDZiY.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yH_l_en_US-j_GacgGQiDZiY.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yH/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yH_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yJ/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yJ_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yK/l/en_US-j/LtVIzBeaKJv.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yK_l_en_US-j_LtVIzBeaKJv.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yK/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yK_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yL/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yL_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yM/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yM_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yN/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yN_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yN/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yN_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yO/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yO_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yP/l/en_US-j/GJMLxxcqSol.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yP_l_en_US-j_GJMLxxcqSol.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yP/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yP_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yQ/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yQ_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yQ/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yQ_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yR/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yR_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yS/l/en_US-j/t_yjRKihvzi.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yS_l_en_US-j_t_yjRKihvzi.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yS/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yS_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yT/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yT_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yU/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yU_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yV/l/en_US-j/AcRfiOirARs.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yV_l_en_US-j_AcRfiOirARs.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yV/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yV_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yW/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yW_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yX/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yX_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yZ/l/en_US-j/vYtVK-UvfGq.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yZ_l_en_US-j_vYtVK-UvfGq.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yZ/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yZ_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/y_/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_y__l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ya/l/en_US-j/nITIwziPvsx.js:
+    get:
+      operationId: get_rsrc.php_{slug}_ya_l_en_US-j_nITIwziPvsx.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ya/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_ya_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ya/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_ya_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yb/l/en_US-j/cH_PqEvnXcW.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yb_l_en_US-j_cH_PqEvnXcW.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yb/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yb_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yc/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yc_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ye/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_ye_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yf/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yf_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yh/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yh_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yj/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yj_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yk/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yk_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yl/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yl_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ym/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_ym_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yn/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yn_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yo/l/en_US-j/NdEcYwncJar.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yo_l_en_US-j_NdEcYwncJar.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yo/l/en_US-j/wLxbx-XIpKD.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yo_l_en_US-j_wLxbx-XIpKD.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yp/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yp_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yr/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yr_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/ys/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_ys_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yt/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yt_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yt/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yt_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yu/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yu_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yv/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yv_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yv/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yv_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yw/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yw_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yx/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yx_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yy/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yy_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yy/l/en_US/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yy_l_en_US_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yz/l/en_US-j/iSThGtrrcxC.js:
+    get:
+      operationId: get_rsrc.php_{slug}_yz_l_en_US-j_iSThGtrrcxC.js
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /rsrc.php/{slug}/yz/l/en_US-j/{slug2}:
+    get:
+      operationId: get_rsrc.php_{slug}_yz_l_en_US-j_{slug2}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /:
+    get:
+      operationId: get_
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /accounts/login:
+    get:
+      operationId: get_accounts_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+    post:
+      operationId: post_accounts_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Discovered endpoint
+      description: |-
+        Static discovery sources: html:attribute
+
+        Discovery contexts: https://www.instagram.<redacted>
+
+        Discovered 77 time(s).
+
+        Discovery snippets: /x-icon" href="https://static.cdninstagram.com/rsrc.<redacted>.ico" /><link rel="alternate" href="https://www.instagram.<redacted>" hreflang=... | ernate" href="https://www.instagram.<redacted>" hreflang="x-default" /><link rel="alternate" href="https://www.instagram.<redacted>?hl=en" hre... | ternate" href="https://www.instagram.<redacted>?hl=en" hreflang="en" /><link rel="alternate" href="https://www.instagram.<redacted>?hl=fr" hre...
+  /accounts/onetap:
+    get:
+      operationId: get_accounts_onetap
+      parameters:
+        - name: next
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /ajax/dtsg:
+    get:
+      operationId: get_ajax_dtsg
+      parameters:
+        - name: __a
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /ajax/navigation:
+    post:
+      operationId: post_ajax_navigation
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/graphql:
+    post:
+      operationId: post_api_graphql
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  errors:
+                    type: array
+                    items:
+                      type: object
+                  extensions:
+                    type: object
+                  data:
+                    type: object
+                additionalProperties: true
+            text/javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/accounts/edit/web_form_data:
+    get:
+      operationId: get_api_v1_accounts_edit_web_form_data
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  form_data:
+                    type: object
+                  status:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /api/v1/clips/music:
+    post:
+      operationId: post_api_v1_clips_music
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/discover/ayml:
+    post:
+      operationId: post_api_v1_discover_ayml
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/discover/web/explore_grid:
+    get:
+      operationId: get_api_v1_discover_web_explore_grid
+      parameters:
+        - name: include_fixed_destinations
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: is_nonpersonalized_explore
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: is_prefetch
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: module
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: omit_cover_media
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/media/{id}/comments:
+    get:
+      operationId: get_api_v1_media_{id}_comments
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: can_support_threading
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: permalink_enabled
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/media/{id}/info:
+    get:
+      operationId: get_api_v1_media_{id}_info
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/media/{id}/permalink:
+    get:
+      operationId: get_api_v1_media_{id}_permalink
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: containermodule
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: exposed_to_experiment
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: qe_universe_name
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: share_to_app
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  permalink:
+                    type: string
+                  status:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /api/v1/web/accounts/login/ajax:
+    post:
+      operationId: post_api_v1_web_accounts_login_ajax
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    type: boolean
+                  userId:
+                    type: string
+                  authenticated:
+                    type: boolean
+                  oneTapPrompt:
+                    type: boolean
+                  has_onboarded_to_text_post_app:
+                    type: boolean
+                  status:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/web/fxcal/ig_sso_users:
+    post:
+      operationId: post_api_v1_web_fxcal_ig_sso_users
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/web/get_profile_pic_props/{slug}:
+    get:
+      operationId: get_api_v1_web_get_profile_pic_props_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  show_profile_pic_sync_reminders:
+                    type: boolean
+                  show_change_profile_pic_confirm_dialog:
+                    type: boolean
+                  remove_profile_pic_header:
+                    type: string
+                  remove_profile_pic_subtext:
+                    type: string
+                  remove_profile_pic_confirm_cta:
+                    type: string
+                  remove_profile_pic_cancel_cta:
+                    type: string
+                  remove_profile_pic_manage_sync_settings_url:
+                    type: string
+                  remove_profile_pic_manage_sync_settings_label:
+                    type: string
+                  is_business_central_identity:
+                    type: boolean
+                  change_profile_pic_actions_screen_header:
+                    type: string
+                  change_profile_pic_actions_screen_subheader:
+                    type: string
+                  change_profile_pic_actions_screen_upload_cta:
+                    type: string
+                  change_profile_pic_actions_screen_remove_cta:
+                    type: string
+                  change_profile_pic_actions_screen_cancel_cta:
+                    type: string
+                  change_profile_pic_actions_screen_manage_sync_settings_url:
+                    type: string
+                  change_profile_pic_actions_screen_manage_sync_settings_label:
+                    type: string
+                  change_profile_pic_header:
+                    type: string
+                  change_profile_pic_subtext:
+                    type: string
+                  change_profile_pic_manage_sync_settings_label:
+                    type: string
+                  change_profile_pic_manage_sync_settings_url:
+                    type: string
+                  status:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /api/v1/web/login_page:
+    get:
+      operationId: get_api_v1_web_login_page
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  gdpr_required:
+                    type: boolean
+                  tos_version:
+                    type: string
+                  status:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /api/v1/web/push/register:
+    post:
+      operationId: post_api_v1_web_push_register
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /api/v1/{slug}/has_interop_upgraded:
+    get:
+      operationId: get_api_v1_{slug}_has_interop_upgraded
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  has_interop_upgraded:
+                    type: boolean
+                  status:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /async/wbloks/fetch:
+    post:
+      operationId: post_async_wbloks_fetch
+      parameters:
+        - name: __bkv
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: appid
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /common/referer_frame.php:
+    get:
+      operationId: get_common_referer_frame.php
+      parameters:
+        - name: cb
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /data/manifest.json:
+    get:
+      operationId: get_data_manifest.json
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  short_name:
+                    type: string
+                  description:
+                    type: string
+                  start_url:
+                    type: string
+                  orientation:
+                    type: string
+                  display:
+                    type: string
+                  <redacted>:
+                    type: array
+                    items:
+                      type: object
+                  theme_color:
+                    type: string
+                  prompt_message:
+                    type: string
+                  icons:
+                    type: array
+                    items:
+                      type: object
+                  gcm_sender_id:
+                    type: string
+                  edge_side_panel:
+                    type: object
+                  lang:
+                    type: string
+                  background_color:
+                    type: string
+                  gcm_user_visible_only:
+                    type: boolean
+                  related_applications:
+                    type: array
+                    items:
+                      type: object
+                additionalProperties: true
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /emails/settings:
+    get:
+      operationId: get_emails_settings
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /explore:
+    get:
+      operationId: get_explore
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /graphql/query:
+    post:
+      operationId: post_graphql_query
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                  extensions:
+                    type: object
+                  status:
+                    type: string
+                additionalProperties: true
+            text/javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /instagram/reel/DPUVYTYgWuY:
+    get:
+      operationId: get_instagram_reel_DPUVYTYgWuY
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /paid_ads/generete_pixels:
+    get:
+      operationId: get_paid_ads_generete_pixels
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /push/web/settings:
+    get:
+      operationId: get_push_web_settings
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /reel/{slug}:
+    get:
+      operationId: get_reel_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /static_resources/webworker/init_script:
+    get:
+      operationId: get_static_resources_webworker_init_script
+      parameters:
+        - name: __hs
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_b
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_r
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_t
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: hash
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: use_broadcast
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: worker_id_in_terminate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: worker_type
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /static_resources/{slug}/init_script:
+    get:
+      operationId: get_static_resources_{slug}_init_script
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: __hs
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_b
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_r
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: __spin_t
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /sync/instagram:
+    post:
+      operationId: post_sync_instagram
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /video/unified_cvc:
+    post:
+      operationId: post_video_unified_cvc
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/x-javascript:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+components:
+  securitySchemes: {}
