@@ -1,0 +1,1660 @@
+openapi: 3.0.3
+info:
+  title: PerfAI API
+  version: 1.0.0
+  description: Auto-generated from requests.jsonl
+  x-generated-at: '2025-10-31T16:06:09Z'
+servers:
+  - url: https://api.perfai.ai
+  - url: https://auth.perfai.ai
+  - url: https://cloud.perfai.ai
+paths:
+  /api/v1/ai-agent/home/chats:
+    get:
+      operationId: get_api_v1_ai-agent_home_chats
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_chats
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_api_v1_ai-agent_home_chats
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user_id:
+                    type: string
+                  org_id:
+                    type: string
+                  chat_type:
+                    type: string
+                  title:
+                    type: string
+                  status:
+                    type: string
+                  execution_state:
+                    type: string
+                  _id:
+                    type: string
+                  created_on:
+                    type: string
+                  updated_on:
+                    type: string
+                  createdAt:
+                    type: string
+                  updatedAt:
+                    type: string
+                  __v:
+                    type: integer
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  title: petstore.swagger.io
+              ex2:
+                value:
+                  title: https://petstore.swagger.io
+      summary: Observed endpoint
+  /api/v1/ai-agent/home/chats/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_home_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  statusCode:
+                    type: integer
+                  message:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/ai-agent/home/stream/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_home_stream_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/event-stream:
+              schema:
+                type: string
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_home_stream_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: input
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/ai-agent/registration/chats/{hex}:
+    get:
+      operationId: get_api_v1_ai-agent_registration_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_ai-agent_registration_chats_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/api-catalog/apps:
+    get:
+      operationId: get_api_v1_api-catalog_apps
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                  openapi_spec:
+                    type: string
+                  base_path:
+                    type: string
+                  auth:
+                    type: string
+                  expired_auth:
+                    type: array
+                    items:
+                      type: object
+                  non_owner_auth:
+                    type: string
+                  non_entitled_auth:
+                    type: string
+                  headers:
+                    type: array
+                    items:
+                      type: object
+                  org_id:
+                    type: string
+                  created_on:
+                    type: string
+                  created_by:
+                    type: string
+                  created_by_email:
+                    type: string
+                  governance_email:
+                    type: string
+                  modified_by:
+                    type: string
+                  modified_by_email:
+                    type: string
+                  modified_on:
+                    type: string
+                  isGatewayApi:
+                    type: boolean
+                  dsr:
+                    type: boolean
+                  midnight_run:
+                    type: boolean
+                  scheduleType:
+                    type: string
+                  excludedServices:
+                    type: array
+                    items:
+                      type: object
+                  runnerType:
+                    type: string
+                  rbac_auths:
+                    type: array
+                    items:
+                      type: object
+                  tenant_one_auths:
+                    type: array
+                    items:
+                      type: object
+                  tenant_two_auths:
+                    type: array
+                    items:
+                      type: object
+                  registrationStatus:
+                    type: string
+                  rateLimitRPS:
+                    type: integer
+                  skipAutoRuns:
+                    type: boolean
+                  environment:
+                    type: string
+                  accessLevel:
+                    type: string
+                  category:
+                    type: string
+                  __v:
+                    type: integer
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_api-catalog_apps
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/api-catalog/apps/all:
+    get:
+      operationId: get_api_v1_api-catalog_apps_all
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_api-catalog_apps_all
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/api-catalog/apps/catalog_id_name_label:
+    get:
+      operationId: get_api_v1_api-catalog_apps_catalog_id_name_label
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_api-catalog_apps_catalog_id_name_label
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/apigateway/create-account:
+    options:
+      operationId: options_api_v1_apigateway_create-account
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_api_v1_apigateway_create-account
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  org_id:
+                    type: string
+                  gateway:
+                    type: string
+                  name:
+                    type: string
+                  connection_status:
+                    type: string
+                  auto_register:
+                    type: boolean
+                  apigee:
+                    type: object
+                  created_on:
+                    type: string
+                  created_by:
+                    type: string
+                  created_by_email:
+                    type: string
+                  _id:
+                    type: string
+                  __v:
+                    type: integer
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                gateway:
+                  type: string
+                name:
+                  type: string
+                connection_status:
+                  type: string
+                apigee:
+                  type: object
+                auto_register:
+                  type: boolean
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  gateway: Apigee
+                  name: <redacted>
+                  connection_status: connected
+                  apigee:
+                    clientId: placeholder_id
+                    clientSecret: <redacted>
+                    redirectUri: https://api.perfai.<redacted>
+                    apiKey: <redacted>
+                    org_id: <redacted>
+                    site_id: <redacted>
+                  auto_register: true
+      summary: Observed endpoint
+  /api/v1/apigateway/get-accounts:
+    get:
+      operationId: get_api_v1_apigateway_get-accounts
+      parameters:
+        - name: gateway
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_apigateway_get-accounts
+      parameters:
+        - name: gateway
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/database/all/Default:
+    get:
+      operationId: get_api_v1_database_all_Default
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_database_all_Default
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/integration/github:
+    get:
+      operationId: get_api_v1_integration_github
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  status:
+                    type: integer
+                  response:
+                    type: object
+                  request:
+                    type: object
+                  level:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_integration_github
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/integration/jira:
+    get:
+      operationId: get_api_v1_integration_jira
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_integration_jira
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/org-users/get_users_orgs:
+    get:
+      operationId: get_api_v1_org-users_get_users_orgs
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_org-users_get_users_orgs
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/orgs/my:
+    get:
+      operationId: get_api_v1_orgs_my
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  org:
+                    type: object
+                  ou:
+                    type: object
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_orgs_my
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/reports/all:
+    get:
+      operationId: get_api_v1_reports_all
+      parameters:
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: report_type
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reports:
+                    type: array
+                    items:
+                      type: object
+                  reportsLength:
+                    type: integer
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_reports_all
+      parameters:
+        - name: date
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: report_type
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/sensitive-data-service/apps/org_issues_security:
+    get:
+      operationId: get_api_v1_sensitive-data-service_apps_org_issues_security
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_sensitive-data-service_apps_org_issues_security
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortBy
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: sortOrder
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/spec-validation/apps:
+    get:
+      operationId: get_api_v1_spec-validation_apps
+      parameters:
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_spec-validation_apps
+      parameters:
+        - name: pageSize
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/spec-validation/dashboard/graphs/issues-by-type:
+    get:
+      operationId: get_api_v1_spec-validation_dashboard_graphs_issues-by-type
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_api_v1_spec-validation_dashboard_graphs_issues-by-type
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /api/v1/users/post-login:
+    options:
+      operationId: options_api_v1_users_post-login
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_api_v1_users_post-login
+      parameters: []
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: {}
+              additionalProperties: true
+            examples:
+              ex1:
+                value: {}
+      summary: Observed endpoint
+  /dashboard/active_issues_by_severity:
+    get:
+      operationId: get_dashboard_active_issues_by_severity
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_active_issues_by_severity
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/all_savings:
+    get:
+      operationId: get_dashboard_all_savings
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  savingsBySeverity:
+                    type: object
+                  totalSavings:
+                    type: integer
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_all_savings
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_design_issues_per_week:
+    get:
+      operationId: get_dashboard_get_design_issues_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_design_issues_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_dismissed_issues_by_severity:
+    get:
+      operationId: get_dashboard_get_dismissed_issues_by_severity
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  closed_issues:
+                    type: array
+                    items:
+                      type: object
+                  blocked_issues_count:
+                    type: integer
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_dismissed_issues_by_severity
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_endpoints_per_week:
+    get:
+      operationId: get_dashboard_get_endpoints_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_endpoints_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_marketplace_models_per_week:
+    get:
+      operationId: get_dashboard_get_marketplace_models_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_marketplace_models_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_registered_apis_per_week:
+    get:
+      operationId: get_dashboard_get_registered_apis_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_registered_apis_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/get_vms_per_week:
+    get:
+      operationId: get_dashboard_get_vms_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_get_vms_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/sensitive_data_per_week:
+    get:
+      operationId: get_dashboard_sensitive_data_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_sensitive_data_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/tests-summary:
+    get:
+      operationId: get_dashboard_tests-summary
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_tests-summary
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /dashboard/total_runs_per_week:
+    get:
+      operationId: get_dashboard_total_runs_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    options:
+      operationId: options_dashboard_total_runs_per_week
+      parameters:
+        - name: weeks
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /storage/get_dropbox_user:
+    get:
+      operationId: get_storage_get_dropbox_user
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  connection:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_storage_get_dropbox_user
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /storage/get_google_drive:
+    get:
+      operationId: get_storage_get_google_drive
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_storage_get_google_drive
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /storage/get_one_drive:
+    get:
+      operationId: get_storage_get_one_drive
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    options:
+      operationId: options_storage_get_one_drive
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /authorize:
+    get:
+      operationId: get_authorize
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client_id
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: prompt
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /favicon.ico:
+    get:
+      operationId: get_favicon.ico
+      parameters: []
+      responses:
+        '404':
+          description: HTTP 404
+          content:
+            text/plain:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /login:
+    get:
+      operationId: get_login
+      parameters:
+        - name: auth0Client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: client
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: code_challenge_method
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: nonce
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: protocol
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: redirect_uri
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_mode
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: response_type
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: scope
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /oauth/token:
+    options:
+      operationId: options_oauth_token
+      parameters: []
+      responses:
+        '204':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+    post:
+      operationId: post_oauth_token
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  id_token:
+                    type: string
+                  scope:
+                    type: string
+                  expires_in:
+                    type: integer
+                  token_type:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: string
+      summary: Observed endpoint
+  /usernamepassword/login:
+    post:
+      operationId: post_usernamepassword_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                client_id:
+                  type: string
+                redirect_uri:
+                  type: string
+                tenant:
+                  type: string
+                response_type:
+                  type: string
+                scope:
+                  type: string
+                _csrf:
+                  type: string
+                state:
+                  type: string
+                _intstate:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+                captcha:
+                  type: string
+                connection:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  client_id: <redacted>
+                  redirect_uri: https://cloud.perfai.ai/
+                  tenant: <redacted>
+                  response_type: code
+                  scope: openid profile email
+                  _csrf: <redacted>
+                  state: <redacted>
+                  _intstate: deprecated
+                  username: abdul-rahman@perfai.ai
+                  password: <redacted>
+                  captcha: ''
+                  connection: Username-<redacted>
+      summary: Observed endpoint
+  /:
+    get:
+      operationId: get_
+      parameters:
+        - name: code
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: state
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /assets/{slug}:
+    get:
+      operationId: get_assets_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/javascript:
+              schema:
+                type: string
+            text/css:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /home:
+    get:
+      operationId: get_home
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
