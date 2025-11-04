@@ -1,0 +1,1121 @@
+openapi: 3.0.3
+info:
+  title: heywoohoo
+  version: 1.0.0
+  description: Auto-generated from requests.jsonl
+  x-generated-at: '2025-11-04T13:25:48Z'
+servers:
+  - url: https://enterprise.heywoohoo.com
+paths:
+  /:
+    get:
+      operationId: get_
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /Bike:
+    get:
+      operationId: get_Bike
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /assets/images/flow_chat_send.png:
+    get:
+      operationId: get_assets_images_flow_chat_send.png
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /login:
+    get:
+      operationId: get_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            text/html:
+              schema:
+                type: string
+      summary: Observed endpoint
+  /v1/code/all/{hex}:
+    get:
+      operationId: get_v1_code_all_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/customerQueries:
+    get:
+      operationId: get_v1_dashboard_customerQueries
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: type
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/customerQueriesWise:
+    get:
+      operationId: get_v1_dashboard_customerQueriesWise
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/deviceStatus:
+    get:
+      operationId: get_v1_dashboard_deviceStatus
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/feedbackStatus:
+    get:
+      operationId: get_v1_dashboard_feedbackStatus
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/fnbOrders:
+    get:
+      operationId: get_v1_dashboard_fnbOrders
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/hourlyAmenitiesTrends:
+    get:
+      operationId: get_v1_dashboard_hourlyAmenitiesTrends
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/hourlyOrdersTrends:
+    get:
+      operationId: get_v1_dashboard_hourlyOrdersTrends
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/info:
+    get:
+      operationId: get_v1_dashboard_info
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/promotionOrders:
+    get:
+      operationId: get_v1_dashboard_promotionOrders
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/revenueStats:
+    get:
+      operationId: get_v1_dashboard_revenueStats
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/spendsphere/guestSpendingHighlights:
+    get:
+      operationId: get_v1_dashboard_spendsphere_guestSpendingHighlights
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/spendsphere/performanceHighlights:
+    get:
+      operationId: get_v1_dashboard_spendsphere_performanceHighlights
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/timeWiseOrders:
+    get:
+      operationId: get_v1_dashboard_timeWiseOrders
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: time
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/topAmenitieOrders:
+    get:
+      operationId: get_v1_dashboard_topAmenitieOrders
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/topOrderRevenues:
+    get:
+      operationId: get_v1_dashboard_topOrderRevenues
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/topQueries:
+    get:
+      operationId: get_v1_dashboard_topQueries
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/dashboard/totalBookings:
+    get:
+      operationId: get_v1_dashboard_totalBookings
+      parameters:
+        - name: endDate
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: startDate
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '500':
+          description: HTTP 500
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  error:
+                    type: string
+                  data:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/entity/all/{hex}:
+    get:
+      operationId: get_v1_entity_all_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v1/faq/all:
+    get:
+      operationId: get_v1_faq_all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/faq/categories:
+    get:
+      operationId: get_v1_faq_categories
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/feedback/allFeedback:
+    get:
+      operationId: get_v1_feedback_allFeedback
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v1/flow:
+    get:
+      operationId: get_v1_flow
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+    post:
+      operationId: post_v1_flow
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                serviceId:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  name: Test Auto Flow
+                  serviceId: <redacted>
+      summary: Observed endpoint
+  /v1/flow/node_new:
+    post:
+      operationId: post_v1_flow_node_new
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                flowId:
+                  type: string
+                node:
+                  type: object
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  flowId: <redacted>
+                  node:
+                    type: input
+                    title: Hello
+                    subType: text
+                    content:
+                      linkedIntent:
+                        name: ''
+      summary: Observed endpoint
+  /v1/flow/{hex}:
+    get:
+      operationId: get_v1_flow_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/group/all/{id}/{id2}:
+    get:
+      operationId: get_v1_group_all_{id}_{id2}
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: id2
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/groupUserHub/hubs/all:
+    get:
+      operationId: get_v1_groupUserHub_hubs_all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v1/intent/all/{hex}:
+    get:
+      operationId: get_v1_intent_all_{hex}
+      parameters:
+        - name: hex
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v1/properties:
+    get:
+      operationId: get_v1_properties
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/retailOutlets:
+    get:
+      operationId: get_v1_retailOutlets
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/service:
+    get:
+      operationId: get_v1_service
+      parameters:
+        - name: id
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/service/all:
+    get:
+      operationId: get_v1_service_all
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+      summary: Observed endpoint
+  /v1/spendsphereAdmin:
+    get:
+      operationId: get_v1_spendsphereAdmin
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/user:
+    get:
+      operationId: get_v1_user
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      summary: Observed endpoint
+  /v1/user/login:
+    post:
+      operationId: post_v1_user_login
+      parameters: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  data:
+                    type: object
+                  error:
+                    type: string
+                additionalProperties: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userName:
+                  type: string
+                password:
+                  type: string
+                deviceId:
+                  type: string
+              additionalProperties: true
+            examples:
+              ex1:
+                value:
+                  userName: admin@woohoo.com
+                  password: <redacted>
+                  deviceId: '12345'
+      summary: Observed endpoint
+  /{slug}:
+    get:
+      operationId: get_{slug}
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+      summary: Observed endpoint
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
